@@ -1,0 +1,6 @@
+framework module Pods_StaffUIKit {
+  umbrella header "Pods-StaffUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
