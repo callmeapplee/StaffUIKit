@@ -39,8 +39,7 @@ extension HomeTopCategoriesTableViewCell:UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = myCollectionView.dequeueReusableCell(withReuseIdentifier: HomeTopCategoryCollectionViewCell.myId, for: indexPath) as! HomeTopCategoryCollectionViewCell
-        let category = HomeTopCategoriesTableViewCell.topCategories[indexPath.row]
-        cell.categoryName.text = category.name
+        cell.category = HomeTopCategoriesTableViewCell.topCategories[indexPath.row]
         return cell
     }
 }

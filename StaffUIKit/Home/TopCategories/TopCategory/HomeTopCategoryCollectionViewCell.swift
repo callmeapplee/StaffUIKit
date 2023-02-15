@@ -12,6 +12,14 @@ class HomeTopCategoryCollectionViewCell: UICollectionViewCell {
     static var myId = "HomeTopCategoryCollectionViewCell"
     static var uinib = UINib(nibName: "HomeTopCategoryCollectionViewCell", bundle: nil)
     @IBOutlet weak var categoryView: UIView!
+    var category:HomeTopCategory!{
+        set{
+            categoryName.text = newValue.name
+        }
+        get{
+            return self.category
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()

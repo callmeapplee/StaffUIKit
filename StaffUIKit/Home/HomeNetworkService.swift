@@ -23,7 +23,7 @@ class HomeNetworkService{
         }
     }
     static func getActiveVacancyData(page:String,perPage:String,completion: @escaping(Vacancy?)->()){
-        var url = "\(Helper.baseURL)active-vacancies?language_id=\(UserInfo.defaults.integer(forKey: "languageID"))&page =\(page)&per_page=\(perPage)&device=\(UIDevice.current.name)&platform=\(UIDevice.current.systemName)&platform_version=\(UIDevice.current.systemVersion)"
+        var url = "\(Helper.baseURL)active-vacancies?language_id=\(UserInfo.defaults.integer(forKey: "languageID"))&page=\(page)&per_page=\(perPage)&device=\(UIDevice.current.name)&platform=\(UIDevice.current.systemName)&platform_version=\(UIDevice.current.systemVersion)"
         url = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         AF.request(url,headers: Helper.header).responseDecodable(of: Vacancy.self) {response in
             switch response.result{

@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
     var homeSearchBar = HomeSearchBarTableViewCell()
     var homeFilter = HomeFilterTableViewCell()
     static var activeVacancies:[VacancyDatum] = []
+    var activeVacanciesPage = 1
+    var fetchingMore = false
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -165,5 +167,27 @@ extension HomeViewController{
     @objc func closeInputView(){
         homeSearchBar.searchBar.resignFirstResponder()
         homeFilter.closeInputView()
+    }
+}
+extension HomeViewController{
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        if offsetY > contentHeight - scrollView.frame.height + 30  {
+            if !fetchingMore {
+                fetchingMore = true
+                activeVacanciesPage += 1
+                HomeNetworkService.getActiveVacancyData(page: String(describing: activeVacanciesPage), perPage: String(describing: 20)) { [self] vacancy in
+                    if vacancy != nil{
+                        fetchingMore = false
+                        let temp = vacancy?.response.data ?? []
+                        for i in temp{
+                            HomeViewController.activeVacancies.append(i)
+                        }
+                        myTableView.reloadData()
+                    }
+                }
+            }
+        }
     }
 }
