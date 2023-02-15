@@ -8,6 +8,7 @@
 import UIKit
 
 class HomeTopCategoryCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var categoryName: UILabel!
     static var myId = "HomeTopCategoryCollectionViewCell"
     static var uinib = UINib(nibName: "HomeTopCategoryCollectionViewCell", bundle: nil)
     @IBOutlet weak var categoryView: UIView!

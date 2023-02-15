@@ -75,6 +75,7 @@
             </constraints>
             <size key="customSize" width="152" height="169"/>
             <connections>
+                <outlet property="categoryName" destination="BD6-84-eOQ" id="x5V-Vx-9eh"/>
                 <outlet property="categoryView" destination="O53-HQ-psg" id="2Ki-2t-O5n"/>
             </connections>
             <point key="canvasLocation" x="185.38461538461539" y="62.203791469194307"/>

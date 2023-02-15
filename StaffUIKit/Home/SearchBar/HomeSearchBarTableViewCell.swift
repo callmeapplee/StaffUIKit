@@ -13,6 +13,7 @@ class HomeSearchBarTableViewCell: UITableViewCell {
     @IBOutlet weak var searchBar: UISearchBar!
     override func awakeFromNib() {
         super.awakeFromNib()
+        setup()
         // Initialization code
     }
     
@@ -20,6 +21,14 @@ class HomeSearchBarTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    func setup(){
+        searchBar.delegate = self
+    }
+}
+extension HomeSearchBarTableViewCell:UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
     
 }

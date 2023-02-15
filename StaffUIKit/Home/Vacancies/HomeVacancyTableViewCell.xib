@@ -80,7 +80,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NcZ-Ta-4T9">
-                                                <rect key="frame" x="0.0" y="51.333333333333314" width="303" height="15"/>
+                                                <rect key="frame" x="0.0" y="51.333333333333329" width="303" height="15"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="bHL-XY-F31">
                                                         <rect key="frame" x="0.0" y="0.0" width="123" height="15"/>
@@ -146,10 +146,15 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="cityName" destination="IC6-rP-v2h" id="Oq8-eU-0PK"/>
                 <outlet property="companyView" destination="zAp-IO-9sv" id="Bk9-xH-KE3"/>
+                <outlet property="employerName" destination="yvx-K3-YMW" id="Qlw-t3-7Y3"/>
+                <outlet property="position" destination="OVS-WS-h6t" id="S5w-Ib-kbz"/>
+                <outlet property="salaryCount" destination="ad4-zk-YHK" id="fnn-65-Ldb"/>
+                <outlet property="scheduleType" destination="l0r-uD-gnU" id="jUU-0S-F68"/>
                 <outlet property="vacancyView" destination="LLi-XS-rrB" id="5x3-em-cyO"/>
             </connections>
-            <point key="canvasLocation" x="153.07692307692307" y="68.246445497630333"/>
+            <point key="canvasLocation" x="-18" y="85"/>
         </tableViewCell>
     </objects>
     <resources>

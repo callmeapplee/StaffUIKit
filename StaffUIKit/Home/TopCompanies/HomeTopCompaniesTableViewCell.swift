@@ -10,6 +10,7 @@ import UIKit
 class HomeTopCompaniesTableViewCell: UITableViewCell {
     static var myId = "HomeTopCompaniesTableViewCell"
     static var uinib = UINib(nibName: "HomeTopCompaniesTableViewCell", bundle: nil)
+    static var topCompanies:[HomeTopCompany] = []
     @IBOutlet weak var myCollectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,11 +34,12 @@ extension HomeTopCompaniesTableViewCell:UICollectionViewDelegate{
 }
 extension HomeTopCompaniesTableViewCell:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return HomeTopCompaniesTableViewCell.topCompanies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = myCollectionView.dequeueReusableCell(withReuseIdentifier: HomeTopCompanyCollectionViewCell.myId, for: indexPath) as! HomeTopCompanyCollectionViewCell
+        
         return cell
     }
     

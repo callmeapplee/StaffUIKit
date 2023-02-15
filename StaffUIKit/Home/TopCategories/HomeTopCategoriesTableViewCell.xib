@@ -12,26 +12,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="166" id="KGk-i7-Jjw" customClass="HomeTopCategoriesTableViewCell" customModule="StaffUIKit" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="166"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="166"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdz-tS-Jpv">
-                        <rect key="frame" x="20" y="0.0" width="280" height="166"/>
+                        <rect key="frame" x="20" y="0.0" width="280" height="120"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t2x-R4-8fJ">
-                                <rect key="frame" x="0.0" y="0.0" width="280" height="55"/>
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="34.333333333333336"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Топ категории" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lt-ml-68z">
-                                        <rect key="frame" x="0.0" y="0.0" width="101.33333333333333" height="55"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="101.33333333333333" height="34.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDK-Gn-hM6">
-                                        <rect key="frame" x="143.33333333333337" y="0.0" width="136.66666666666663" height="55"/>
+                                        <rect key="frame" x="143.33333333333337" y="0.0" width="136.66666666666663" height="34.333333333333336"/>
                                         <state key="normal" title="Все категории" image="chevron.right" catalog="system"/>
                                         <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Все категории" imagePadding="5" buttonSize="medium">
                                             <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
@@ -39,13 +39,13 @@
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.329999999999998" id="VfI-1t-zJ7"/>
+                                </constraints>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SZj-mN-qC4">
-                                <rect key="frame" x="0.0" y="55" width="280" height="111"/>
+                                <rect key="frame" x="0.0" y="34.333333333333336" width="280" height="85.666666666666657"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="111" id="7zY-mb-7AM"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JIu-fU-trI">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>

@@ -14,6 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        if (UserInfo.defaults.integer(forKey: "languageID") == 0){
+            UserInfo.defaults.set(2, forKey: "languageID")
+        }
         // Override point for customization after application launch.
         return true
     }

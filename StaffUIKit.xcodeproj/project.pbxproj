@@ -21,7 +21,11 @@
 		FA3183BF299A2CD500DDDBD3 /* HomeSearchBarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3183BD299A2CD500DDDBD3 /* HomeSearchBarTableViewCell.xib */; };
 		FA3183C3299A315F00DDDBD3 /* HomeFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3183C1299A315F00DDDBD3 /* HomeFilterTableViewCell.swift */; };
 		FA3183C4299A315F00DDDBD3 /* HomeFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3183C2299A315F00DDDBD3 /* HomeFilterTableViewCell.xib */; };
-		FA73C058299B7BF60099A514 /* HomeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73C057299B7BF60099A514 /* HomeNetworkManager.swift */; };
+		FA73C058299B7BF60099A514 /* HomeNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73C057299B7BF60099A514 /* HomeNetworkService.swift */; };
+		FA73C05B299BAFBE0099A514 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73C05A299BAFBE0099A514 /* HomeModel.swift */; };
+		FA73C05E299BB4010099A514 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73C05D299BB4010099A514 /* Helper.swift */; };
+		FA73C061299BB5190099A514 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73C060299BB5190099A514 /* UserInfo.swift */; };
+		FABCA4F7299C883D00989688 /* VacancyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCA4F6299C883D00989688 /* VacancyModel.swift */; };
 		FAC47224299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC47222299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.swift */; };
 		FAC47225299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC47223299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.xib */; };
 		FAC4722D299A4192003E1E3E /* HomeTopCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4722B299A4192003E1E3E /* HomeTopCategoryCollectionViewCell.swift */; };
@@ -53,7 +57,11 @@
 		FA3183BD299A2CD500DDDBD3 /* HomeSearchBarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSearchBarTableViewCell.xib; sourceTree = "<group>"; };
 		FA3183C1299A315F00DDDBD3 /* HomeFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterTableViewCell.swift; sourceTree = "<group>"; };
 		FA3183C2299A315F00DDDBD3 /* HomeFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFilterTableViewCell.xib; sourceTree = "<group>"; };
-		FA73C057299B7BF60099A514 /* HomeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkManager.swift; sourceTree = "<group>"; };
+		FA73C057299B7BF60099A514 /* HomeNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkService.swift; sourceTree = "<group>"; };
+		FA73C05A299BAFBE0099A514 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		FA73C05D299BB4010099A514 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		FA73C060299BB5190099A514 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		FABCA4F6299C883D00989688 /* VacancyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyModel.swift; sourceTree = "<group>"; };
 		FAC47222299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopCategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		FAC47223299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTopCategoriesTableViewCell.xib; sourceTree = "<group>"; };
 		FAC4722B299A4192003E1E3E /* HomeTopCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -116,6 +124,8 @@
 		FA318398299A0E0D00DDDBD3 /* StaffUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				FA73C05F299BB5060099A514 /* UserInfo */,
+				FA73C05C299BB3F40099A514 /* Helper */,
 				FA3183B1299A0E6600DDDBD3 /* App */,
 				FA3183B0299A0E5E00DDDBD3 /* Home */,
 				FA3183A5299A0E0E00DDDBD3 /* Assets.xcassets */,
@@ -137,7 +147,8 @@
 				FA3183BB299A2BD200DDDBD3 /* SearchBar */,
 				FA3183B6299A12A600DDDBD3 /* Header */,
 				FA3183B4299A0EBA00DDDBD3 /* HomeViewController.swift */,
-				FA73C057299B7BF60099A514 /* HomeNetworkManager.swift */,
+				FA73C057299B7BF60099A514 /* HomeNetworkService.swift */,
+				FA73C05A299BAFBE0099A514 /* HomeModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -176,6 +187,22 @@
 				FA3183C2299A315F00DDDBD3 /* HomeFilterTableViewCell.xib */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		FA73C05C299BB3F40099A514 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FA73C05D299BB4010099A514 /* Helper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FA73C05F299BB5060099A514 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				FA73C060299BB5190099A514 /* UserInfo.swift */,
+			);
+			path = UserInfo;
 			sourceTree = "<group>";
 		};
 		FAC4721D299A3D7F003E1E3E /* TopCategories */ = {
@@ -219,6 +246,7 @@
 		FAC4723D299AA1EE003E1E3E /* Vacancies */ = {
 			isa = PBXGroup;
 			children = (
+				FABCA4F6299C883D00989688 /* VacancyModel.swift */,
 				FAC47242299AA783003E1E3E /* HomeVacancyTableViewCell.swift */,
 				FAC47243299AA783003E1E3E /* HomeVacancyTableViewCell.xib */,
 			);
@@ -350,15 +378,19 @@
 			files = (
 				FAC4723B299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.swift in Sources */,
 				FA3183A4299A0E0D00DDDBD3 /* StaffUIKit.xcdatamodeld in Sources */,
+				FA73C05E299BB4010099A514 /* Helper.swift in Sources */,
 				FA3183B9299A12CD00DDDBD3 /* HomeHeaderTableViewCell.swift in Sources */,
+				FA73C061299BB5190099A514 /* UserInfo.swift in Sources */,
 				FA3183C3299A315F00DDDBD3 /* HomeFilterTableViewCell.swift in Sources */,
-				FA73C058299B7BF60099A514 /* HomeNetworkManager.swift in Sources */,
+				FA73C058299B7BF60099A514 /* HomeNetworkService.swift in Sources */,
 				FAC47224299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.swift in Sources */,
 				FAC4722D299A4192003E1E3E /* HomeTopCategoryCollectionViewCell.swift in Sources */,
 				FAC47244299AA783003E1E3E /* HomeVacancyTableViewCell.swift in Sources */,
 				FA3183BE299A2CD500DDDBD3 /* HomeSearchBarTableViewCell.swift in Sources */,
 				FAC47236299A995C003E1E3E /* HomeTopCompaniesTableViewCell.swift in Sources */,
+				FA73C05B299BAFBE0099A514 /* HomeModel.swift in Sources */,
 				FA31839A299A0E0D00DDDBD3 /* AppDelegate.swift in Sources */,
+				FABCA4F7299C883D00989688 /* VacancyModel.swift in Sources */,
 				FA31839C299A0E0D00DDDBD3 /* SceneDelegate.swift in Sources */,
 				FA3183B5299A0EBA00DDDBD3 /* HomeViewController.swift in Sources */,
 			);

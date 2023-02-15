@@ -71,6 +71,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="categoryTextField" destination="L6K-f0-VML" id="ZNQ-cw-IQm"/>
+                <outlet property="cityTextField" destination="7Ud-3A-9wJ" id="9c0-so-ZVg"/>
                 <outlet property="filterBtn" destination="chK-Lb-5gJ" id="Qfm-vt-9yF"/>
                 <outlet property="filterView" destination="WkR-Ow-Akf" id="TcO-6u-MN0"/>
             </connections>

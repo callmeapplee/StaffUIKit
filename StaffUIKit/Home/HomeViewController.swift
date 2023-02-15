@@ -8,8 +8,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
+    var backgroundTap = UITapGestureRecognizer()
     @IBOutlet weak var myTableView: UITableView!
+    var homeSearchBar = HomeSearchBarTableViewCell()
+    var homeFilter = HomeFilterTableViewCell()
+    static var activeVacancies:[VacancyDatum] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -28,7 +31,23 @@ class HomeViewController: UIViewController {
         
     }   
     func setup(){
-       
+        backgroundTap.addTarget(self, action: #selector(closeInputView))
+        self.view.addGestureRecognizer(backgroundTap)
+        HomeNetworkService.getHomeData { [self] home in
+            if home != nil{
+                HomeTopCompaniesTableViewCell.topCompanies = home?.response.topCompanies ?? []
+                HomeTopCategoriesTableViewCell.topCategories = home?.response.topCategories ?? []
+                HomeFilterTableViewCell.cities = home?.response.cities ?? []
+                HomeFilterTableViewCell.categories = home?.response.topCategories ?? []
+                myTableView.reloadData()
+            }
+        }
+        HomeNetworkService.getActiveVacancyData(page: String(describing: 1), perPage: String(describing: 20)) {[self] vacancy in
+            if vacancy != nil{
+                HomeViewController.activeVacancies = vacancy?.response.data ?? []
+                myTableView.reloadData()
+            }
+        }
     }
     /*
      // MARK: - Navigation
@@ -43,10 +62,40 @@ class HomeViewController: UIViewController {
 }
 extension HomeViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if section == 6{
+            return HomeViewController.activeVacancies.count
+        }
+        else{
+            return 1
+        }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 7
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0{
+            return 85
+        }
+        else if indexPath.section == 1{
+            return 55
+        }
+        else if indexPath.section == 2{
+            return 42
+            
+        }
+        if indexPath.section == 3{
+            return 160
+        }
+        else if indexPath.section == 4{
+            return 138
+        }
+        else if indexPath.section == 5{
+            return 20
+        }
+        else if indexPath.section == 6{
+            return 120
+        }
+        return 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = indexPath.section
@@ -54,42 +103,52 @@ extension HomeViewController:UITableViewDataSource{
             let cell = myTableView.dequeueReusableCell(withIdentifier: HomeHeaderTableViewCell.myId,for: indexPath) as! HomeHeaderTableViewCell
             
             cell.backgroundColor = .clear
+            cell.selectionStyle = .none
             return cell
         }
         else if section == 1{
             let cell = myTableView.dequeueReusableCell(withIdentifier: HomeSearchBarTableViewCell.myId,for: indexPath) as! HomeSearchBarTableViewCell
-            
+            homeSearchBar = cell
             cell.backgroundColor = .clear
+            cell.selectionStyle = .none
             return cell
         }
         else if section == 2{
             let cell = myTableView.dequeueReusableCell(withIdentifier: HomeFilterTableViewCell.myId,for: indexPath) as! HomeFilterTableViewCell
-            
+            homeFilter = cell
             cell.backgroundColor = .clear
+            cell.selectionStyle = .none
             return cell
         }
         else if section == 3{
             let cell = myTableView.dequeueReusableCell(withIdentifier: HomeTopCategoriesTableViewCell.myId,for: indexPath) as! HomeTopCategoriesTableViewCell
-
+            cell.myCollectionView.reloadData()
             cell.backgroundColor = .clear
+            cell.selectionStyle = .none
             return cell
         }
         else if section == 4{
             let cell = myTableView.dequeueReusableCell(withIdentifier: HomeTopCompaniesTableViewCell.myId,for: indexPath) as! HomeTopCompaniesTableViewCell
+            cell.myCollectionView.reloadData()
             cell.backgroundColor = .clear
+            cell.selectionStyle = .none
             return cell
         }
         else if section == 5{
-            let cell = UITableViewCell(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 20))
-            let label = UILabel(frame: CGRect(x: 20, y: 10, width: self.view.frame.width, height: 20))
+            let cell = UITableViewCell()
+            let label = UILabel(frame: CGRect(x: 20, y: 0, width: self.view.frame.width, height: 20))
             label.font = .systemFont(ofSize: 14, weight: .semibold)
             label.text = "Актуальные Вакансии"
             cell.addSubview(label)
             cell.backgroundColor = .clear
+            cell.selectionStyle = .none
             return cell
         }
         else if section == 6{
             let cell = myTableView.dequeueReusableCell(withIdentifier: HomeVacancyTableViewCell.myId, for: indexPath) as! HomeVacancyTableViewCell
+            let row = indexPath.row
+            cell.vacancy = HomeViewController.activeVacancies[row]
+            cell.selectionStyle = .none
             return cell
         }
         else{
@@ -101,4 +160,10 @@ extension HomeViewController:UITableViewDataSource{
 }
 extension HomeViewController:UITableViewDelegate{
     
+}
+extension HomeViewController{
+    @objc func closeInputView(){
+        homeSearchBar.searchBar.resignFirstResponder()
+        homeFilter.closeInputView()
+    }
 }
