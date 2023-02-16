@@ -42,6 +42,7 @@ class HomeViewController: UIViewController {
         myTableView.register(HomeTopCategoriesTableViewCell.uinib, forCellReuseIdentifier: HomeTopCategoriesTableViewCell.myId)
         myTableView.register(HomeTopCompaniesTableViewCell.uinib, forCellReuseIdentifier: HomeTopCompaniesTableViewCell.myId)
         myTableView.register(HomeVacancyTableViewCell.uinib, forCellReuseIdentifier: HomeVacancyTableViewCell.myId)
+        myTableView.register(HomeIndicatorTableViewCell.uinib, forCellReuseIdentifier: HomeIndicatorTableViewCell.myId)
         
     }
     func setup(){
@@ -143,7 +144,7 @@ extension HomeViewController:UITableViewDataSource{
         }
         else if indexPath.section == 8{
             if loadingTime{
-                return myTableView.frame.size.height - myTableView.contentOffset.y
+                return myTableView.frame.size.height - 250
             }
             else{
                 return 0
@@ -218,7 +219,10 @@ extension HomeViewController:UITableViewDataSource{
             return cell
         }
         else if section == 8{
-            return UITableViewCell()
+            let cell = myTableView.dequeueReusableCell(withIdentifier: HomeIndicatorTableViewCell.myId) as! HomeIndicatorTableViewCell
+            cell.indicator.startAnimating()
+            
+            return cell
         }
         else{
             return UITableViewCell()

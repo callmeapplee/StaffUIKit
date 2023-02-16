@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3A0DC4542E520CE48DE5827C /* Pods_StaffUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB199641CC6399D6AC2EC39 /* Pods_StaffUIKit.framework */; };
+		FA09444C299E8C5000AA24AE /* HomeIndicatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09444A299E8C5000AA24AE /* HomeIndicatorTableViewCell.swift */; };
+		FA09444D299E8C5000AA24AE /* HomeIndicatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA09444B299E8C5000AA24AE /* HomeIndicatorTableViewCell.xib */; };
 		FA31839A299A0E0D00DDDBD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA318399299A0E0D00DDDBD3 /* AppDelegate.swift */; };
 		FA31839C299A0E0D00DDDBD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31839B299A0E0D00DDDBD3 /* SceneDelegate.swift */; };
 		FA3183A1299A0E0D00DDDBD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA31839F299A0E0D00DDDBD3 /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 		4FB199641CC6399D6AC2EC39 /* Pods_StaffUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaffUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9052BDB17962AFF0390C449 /* Pods-StaffUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaffUIKit.release.xcconfig"; path = "Target Support Files/Pods-StaffUIKit/Pods-StaffUIKit.release.xcconfig"; sourceTree = "<group>"; };
 		BFF772D4C2EE556C1C903839 /* Pods-StaffUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaffUIKit.debug.xcconfig"; path = "Target Support Files/Pods-StaffUIKit/Pods-StaffUIKit.debug.xcconfig"; sourceTree = "<group>"; };
+		FA09444A299E8C5000AA24AE /* HomeIndicatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIndicatorTableViewCell.swift; sourceTree = "<group>"; };
+		FA09444B299E8C5000AA24AE /* HomeIndicatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeIndicatorTableViewCell.xib; sourceTree = "<group>"; };
 		FA318396299A0E0D00DDDBD3 /* StaffUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaffUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA318399299A0E0D00DDDBD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA31839B299A0E0D00DDDBD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FA094449299E8C3000AA24AE /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				FA09444A299E8C5000AA24AE /* HomeIndicatorTableViewCell.swift */,
+				FA09444B299E8C5000AA24AE /* HomeIndicatorTableViewCell.xib */,
+			);
+			path = Indicator;
+			sourceTree = "<group>";
+		};
 		FA31838D299A0E0D00DDDBD3 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +158,7 @@
 		FA3183B0299A0E5E00DDDBD3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FA094449299E8C3000AA24AE /* Indicator */,
 				FAC4723D299AA1EE003E1E3E /* Vacancies */,
 				FAC4722F299A990E003E1E3E /* TopCompanies */,
 				FAC4721D299A3D7F003E1E3E /* TopCategories */,
@@ -335,6 +349,7 @@
 				FA3183BA299A12CD00DDDBD3 /* HomeHeaderTableViewCell.xib in Resources */,
 				FAC47245299AA783003E1E3E /* HomeVacancyTableViewCell.xib in Resources */,
 				FA3183A6299A0E0E00DDDBD3 /* Assets.xcassets in Resources */,
+				FA09444D299E8C5000AA24AE /* HomeIndicatorTableViewCell.xib in Resources */,
 				FAC4723C299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.xib in Resources */,
 				FA3183A1299A0E0D00DDDBD3 /* Main.storyboard in Resources */,
 				FAC4722E299A4192003E1E3E /* HomeTopCategoryCollectionViewCell.xib in Resources */,
@@ -398,6 +413,7 @@
 				FA73C061299BB5190099A514 /* UserInfo.swift in Sources */,
 				FA3183C3299A315F00DDDBD3 /* HomeFilterTableViewCell.swift in Sources */,
 				FA73C058299B7BF60099A514 /* HomeNetworkService.swift in Sources */,
+				FA09444C299E8C5000AA24AE /* HomeIndicatorTableViewCell.swift in Sources */,
 				FAC47224299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.swift in Sources */,
 				FAC4722D299A4192003E1E3E /* HomeTopCategoryCollectionViewCell.swift in Sources */,
 				FAC47244299AA783003E1E3E /* HomeVacancyTableViewCell.swift in Sources */,
