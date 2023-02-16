@@ -6,10 +6,15 @@
 //
 
 import UIKit
-
+import ShimmerSwift
 class HomeVacancyTableViewCell: UITableViewCell {
+    
+    
     static var myId = "HomeVacancyTableViewCell"
     static var uinib = UINib(nibName: "HomeVacancyTableViewCell", bundle: nil)
+    var indexPath = IndexPath()
+    @IBOutlet weak var shimmeringView: ShimmeringView!
+    @IBOutlet weak var companyLogo: UIImageView!
     @IBOutlet weak var vacancyView: UIView!
     @IBOutlet weak var companyView: UIView!
     @IBOutlet weak var position: UILabel!
@@ -18,7 +23,8 @@ class HomeVacancyTableViewCell: UITableViewCell {
     @IBOutlet weak var salaryCount: UILabel!
     @IBOutlet weak var scheduleType: UILabel!
     private var _vacancy: VacancyDatum!
-
+    
+    var homeDataService = HomeDataService()
     var vacancy: VacancyDatum! {
         set {
             _vacancy = newValue
@@ -38,6 +44,30 @@ class HomeVacancyTableViewCell: UITableViewCell {
                 salaryCount.text = l + " - " + r
             }
             scheduleType.text = _vacancy.scheduleType.name
+            var contains = false
+            for i in HomeDataService.vacanciesDB{
+                if i.id == vacancy.employerID{
+                    if i.logoURL == vacancy.employer.logo{
+                        contains = true
+                        companyLogo.image = UIImage(data: i.logo!)
+                        shimmeringView.isShimmering = false
+                    }
+                    else{
+                        homeDataService.delete(vacancyDB: i)
+                    }
+                }
+            }
+            if !contains {
+                NetworkService.getImage(pathURL: vacancy.employer.logo) { [self] response in
+                    if let data = response{
+                        homeDataService.add(logoURl: vacancy.employer.logo, id: vacancy.employerID, logo: data)
+                        companyLogo.image = UIImage(data: data)
+                        shimmeringView.isShimmering = false
+                    }
+                    
+                }
+                
+            }
         }
         get {
             return _vacancy
@@ -50,8 +80,12 @@ class HomeVacancyTableViewCell: UITableViewCell {
         // Initialization code
     }
     func setup(){
+        shimmeringView.isShimmering = true
+        shimmeringView.contentView = companyLogo
+        shimmeringView.layer.cornerRadius = 12
         vacancyView.layer.cornerRadius = 12
         companyView.layer.cornerRadius = 12
+        companyLogo.layer.cornerRadius = 12
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

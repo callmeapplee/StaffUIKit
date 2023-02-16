@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (5.6.4)
+  - ShimmerSwift (2.1.1)
 
 DEPENDENCIES:
   - Alamofire
+  - ShimmerSwift
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - ShimmerSwift
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  ShimmerSwift: f7ed2daf9c246de8299dfd9e12c6ab465cba9842
 
-PODFILE CHECKSUM: 6dfae779c61140fd88b4a54039222f43f5f4e98d
+PODFILE CHECKSUM: dff60edd6e3f7cfb9850df34971b9f1fb64ebe88
 
 COCOAPODS: 1.11.3

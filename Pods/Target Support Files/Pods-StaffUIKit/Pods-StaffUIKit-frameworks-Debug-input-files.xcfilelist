@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-StaffUIKit/Pods-StaffUIKit-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/ShimmerSwift/ShimmerSwift.framework

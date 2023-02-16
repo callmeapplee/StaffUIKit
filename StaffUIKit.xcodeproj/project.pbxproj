@@ -36,6 +36,8 @@
 		FAC4723C299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC4723A299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.xib */; };
 		FAC47244299AA783003E1E3E /* HomeVacancyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC47242299AA783003E1E3E /* HomeVacancyTableViewCell.swift */; };
 		FAC47245299AA783003E1E3E /* HomeVacancyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC47243299AA783003E1E3E /* HomeVacancyTableViewCell.xib */; };
+		FAE520D4299CE9B200CDA618 /* HomeDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE520D3299CE9B200CDA618 /* HomeDataService.swift */; };
+		FAE520D7299CFA2F00CDA618 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE520D6299CFA2F00CDA618 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		FAC4723A299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTopCompanyCollectionViewCell.xib; sourceTree = "<group>"; };
 		FAC47242299AA783003E1E3E /* HomeVacancyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVacancyTableViewCell.swift; sourceTree = "<group>"; };
 		FAC47243299AA783003E1E3E /* HomeVacancyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVacancyTableViewCell.xib; sourceTree = "<group>"; };
+		FAE520D3299CE9B200CDA618 /* HomeDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataService.swift; sourceTree = "<group>"; };
+		FAE520D6299CFA2F00CDA618 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,9 +128,10 @@
 		FA318398299A0E0D00DDDBD3 /* StaffUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				FA3183B1299A0E6600DDDBD3 /* App */,
+				FAE520D5299CFA1B00CDA618 /* NetworkService */,
 				FA73C05F299BB5060099A514 /* UserInfo */,
 				FA73C05C299BB3F40099A514 /* Helper */,
-				FA3183B1299A0E6600DDDBD3 /* App */,
 				FA3183B0299A0E5E00DDDBD3 /* Home */,
 				FA3183A5299A0E0E00DDDBD3 /* Assets.xcassets */,
 				FA31839F299A0E0D00DDDBD3 /* Main.storyboard */,
@@ -146,8 +151,9 @@
 				FA3183C0299A314E00DDDBD3 /* Filter */,
 				FA3183BB299A2BD200DDDBD3 /* SearchBar */,
 				FA3183B6299A12A600DDDBD3 /* Header */,
-				FA3183B4299A0EBA00DDDBD3 /* HomeViewController.swift */,
+				FAE520D3299CE9B200CDA618 /* HomeDataService.swift */,
 				FA73C057299B7BF60099A514 /* HomeNetworkService.swift */,
+				FA3183B4299A0EBA00DDDBD3 /* HomeViewController.swift */,
 				FA73C05A299BAFBE0099A514 /* HomeModel.swift */,
 			);
 			path = Home;
@@ -251,6 +257,14 @@
 				FAC47243299AA783003E1E3E /* HomeVacancyTableViewCell.xib */,
 			);
 			path = Vacancies;
+			sourceTree = "<group>";
+		};
+		FAE520D5299CFA1B00CDA618 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				FAE520D6299CFA2F00CDA618 /* NetworkService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +392,7 @@
 			files = (
 				FAC4723B299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.swift in Sources */,
 				FA3183A4299A0E0D00DDDBD3 /* StaffUIKit.xcdatamodeld in Sources */,
+				FAE520D4299CE9B200CDA618 /* HomeDataService.swift in Sources */,
 				FA73C05E299BB4010099A514 /* Helper.swift in Sources */,
 				FA3183B9299A12CD00DDDBD3 /* HomeHeaderTableViewCell.swift in Sources */,
 				FA73C061299BB5190099A514 /* UserInfo.swift in Sources */,
@@ -390,6 +405,7 @@
 				FAC47236299A995C003E1E3E /* HomeTopCompaniesTableViewCell.swift in Sources */,
 				FA73C05B299BAFBE0099A514 /* HomeModel.swift in Sources */,
 				FA31839A299A0E0D00DDDBD3 /* AppDelegate.swift in Sources */,
+				FAE520D7299CFA2F00CDA618 /* NetworkService.swift in Sources */,
 				FABCA4F7299C883D00989688 /* VacancyModel.swift in Sources */,
 				FA31839C299A0E0D00DDDBD3 /* SceneDelegate.swift in Sources */,
 				FA3183B5299A0EBA00DDDBD3 /* HomeViewController.swift in Sources */,

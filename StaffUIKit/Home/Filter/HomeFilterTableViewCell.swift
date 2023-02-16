@@ -12,6 +12,7 @@ class HomeFilterTableViewCell: UITableViewCell {
     static var uinib = UINib(nibName: "HomeFilterTableViewCell", bundle: nil)
     var citiesPicker = UIPickerView()
     var categoriesPicker = UIPickerView()
+    var filterDelegate:FilterParams?
     static var cities:[HomeCity] = []
     static var categories:[HomeTopCategory] = []
     @IBOutlet weak var categoryTextField: UITextField!
@@ -25,6 +26,7 @@ class HomeFilterTableViewCell: UITableViewCell {
         // Initialization code
     }
     func setup(){
+        
         filterView.layer.cornerRadius = 12
         filterBtn.layer.cornerRadius = 8
         filterBtn.clipsToBounds = true
@@ -76,17 +78,31 @@ extension HomeFilterTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource 
             return HomeFilterTableViewCell.cities[row].nameRu
         }
         else{
-            return HomeFilterTableViewCell.cities[row].nameRu
+            return HomeFilterTableViewCell.categories[row].name
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if citiesPicker == pickerView{
+            if row == 0{
+                HomeViewController.filterParams[1] = ""
+            }
+            else{
+                HomeViewController.filterParams[1] = "&city_id=\(HomeFilterTableViewCell.cities[row].id)"
+            }
             cityTextField.text =  HomeFilterTableViewCell.cities[row].nameRu
         }
         else{
-            categoryTextField.text = HomeFilterTableViewCell.cities[row].nameRu
+            if row == 0{
+                HomeViewController.filterParams[2] = ""
+            }
+            else{
+                HomeViewController.filterParams[2] = "&category_id=\(HomeFilterTableViewCell.categories[row].id)"
+            }
+            categoryTextField.text = HomeFilterTableViewCell.categories[row].name
+            
         }
+        filterDelegate?.didChange()
     }
     
 }

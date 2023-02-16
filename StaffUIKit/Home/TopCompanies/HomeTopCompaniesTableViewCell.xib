@@ -44,7 +44,7 @@
                                 </constraints>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Xbb-01-daz">
-                                <rect key="frame" x="0.0" y="34.333333333333336" width="280" height="85.666666666666657"/>
+                                <rect key="frame" x="0.0" y="34.333333333333343" width="280" height="59.666666666666657"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jkB-Vl-u1I">
                                     <size key="itemSize" width="128" height="128"/>
@@ -61,7 +61,7 @@
                             <constraint firstAttribute="trailing" secondItem="KkV-6s-4Vw" secondAttribute="trailing" id="Bzi-4c-gbi"/>
                             <constraint firstItem="Xbb-01-daz" firstAttribute="top" secondItem="KkV-6s-4Vw" secondAttribute="bottom" id="HIj-5y-lhL"/>
                             <constraint firstItem="KkV-6s-4Vw" firstAttribute="top" secondItem="3WV-Zs-PFM" secondAttribute="top" id="chw-HQ-Ueg"/>
-                            <constraint firstAttribute="bottom" secondItem="Xbb-01-daz" secondAttribute="bottom" id="fvy-zA-orG"/>
+                            <constraint firstAttribute="bottom" secondItem="Xbb-01-daz" secondAttribute="bottom" constant="26" id="fvy-zA-orG"/>
                             <constraint firstItem="Xbb-01-daz" firstAttribute="leading" secondItem="3WV-Zs-PFM" secondAttribute="leading" id="oXb-PF-Ea7"/>
                         </constraints>
                     </view>

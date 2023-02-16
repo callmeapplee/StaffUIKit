@@ -6,5 +6,6 @@ target 'StaffUIKit' do
   use_frameworks!
 
   # Pods for StaffUIKit
+pod 'ShimmerSwift'
 pod 'Alamofire'
 end

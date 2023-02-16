@@ -26,6 +26,7 @@ struct VacancyResponse: Codable {
 
 // MARK: - Datum
 struct VacancyDatum: Codable {
+    var logoData:Data?
     let id: Int
     let position, datumDescription: String?
     let employerID, categoryID, cityID, languageID: Int
@@ -39,6 +40,7 @@ struct VacancyDatum: Codable {
     let scheduleType, payrollType: VacancyCategory
 
     enum CodingKeys: String, CodingKey {
+        case logoData
         case id, position
         case datumDescription = "description"
         case employerID = "employer_id"

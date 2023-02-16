@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (UserInfo.defaults.integer(forKey: "languageID") == 0){
             UserInfo.defaults.set(2, forKey: "languageID")
         }
+        
+        let homeDataService = HomeDataService()
+        homeDataService.fetchingData()
         // Override point for customization after application launch.
         return true
     }

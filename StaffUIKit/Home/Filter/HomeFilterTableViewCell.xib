@@ -10,10 +10,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="42" id="KGk-i7-Jjw" customClass="HomeFilterTableViewCell" customModule="StaffUIKit" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkR-Ow-Akf">
@@ -63,7 +63,7 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="WkR-Ow-Akf" secondAttribute="bottom" id="4Nt-WN-lEd"/>
+                    <constraint firstAttribute="bottom" secondItem="WkR-Ow-Akf" secondAttribute="bottom" constant="32" id="4Nt-WN-lEd"/>
                     <constraint firstItem="WkR-Ow-Akf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="X3o-Ot-oj9"/>
                     <constraint firstAttribute="trailing" secondItem="WkR-Ow-Akf" secondAttribute="trailing" constant="20" id="qK7-VU-0SE"/>
                     <constraint firstItem="WkR-Ow-Akf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="v7f-af-Ptb"/>
