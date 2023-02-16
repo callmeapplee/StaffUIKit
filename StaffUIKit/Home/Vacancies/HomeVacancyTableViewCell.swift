@@ -23,8 +23,7 @@ class HomeVacancyTableViewCell: UITableViewCell {
     @IBOutlet weak var salaryCount: UILabel!
     @IBOutlet weak var scheduleType: UILabel!
     private var _vacancy: VacancyDatum!
-    
-    var homeDataService = HomeDataService()
+    var homeDataService = VacancyDataService()
     var vacancy: VacancyDatum! {
         set {
             _vacancy = newValue
@@ -45,7 +44,7 @@ class HomeVacancyTableViewCell: UITableViewCell {
             }
             scheduleType.text = _vacancy.scheduleType.name
             var contains = false
-            for i in HomeDataService.vacanciesDB{
+            for i in VacancyDataService.vacanciesDB{
                 if i.id == vacancy.employerID{
                     if i.logoURL == vacancy.employer.logo{
                         contains = true

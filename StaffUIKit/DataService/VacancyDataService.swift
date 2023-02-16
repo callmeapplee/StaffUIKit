@@ -8,21 +8,21 @@
 import Foundation
 import UIKit
 import CoreData
-class HomeDataService{
+class VacancyDataService{
     static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     static var vacanciesDB:[VacancyDB] = []
     func fetchingData(){
         let fetchRequest:NSFetchRequest<VacancyDB> = VacancyDB.fetchRequest()
         do {
-            HomeDataService.vacanciesDB = try HomeDataService.context.fetch(fetchRequest)
+            VacancyDataService.vacanciesDB = try VacancyDataService.context.fetch(fetchRequest)
         }
         catch{
             print(error.localizedDescription)
         }
     }
     func add(logoURl:String,id:Int,logo:Data){
-        let entity = NSEntityDescription.entity(forEntityName: "VacancyDB", in: HomeDataService.context)
-        let vacancyDBObject = NSManagedObject(entity: entity!, insertInto: HomeDataService.context) as! VacancyDB
+        let entity = NSEntityDescription.entity(forEntityName: "VacancyDB", in: VacancyDataService.context)
+        let vacancyDBObject = NSManagedObject(entity: entity!, insertInto: VacancyDataService.context) as! VacancyDB
         vacancyDBObject.logoURL = logoURl
         vacancyDBObject.id = Int64(id)
         vacancyDBObject.logo = logo
@@ -31,12 +31,12 @@ class HomeDataService{
         
     }
     func delete(vacancyDB:VacancyDB){
-        HomeDataService.context.delete(vacancyDB)
+        VacancyDataService.context.delete(vacancyDB)
         save()
     }
     func save(){
         do {
-            try HomeDataService.context.save()
+            try VacancyDataService.context.save()
         }
         catch{
             print(error.localizedDescription)
