@@ -12,6 +12,7 @@ protocol FilterParams{
     func didChange()
 }
 class HomeViewController: UIViewController {
+    var requestTimer = Timer()
     var backgroundTap = UITapGestureRecognizer()
     @IBOutlet weak var myTableView: UITableView!
     var homeSearchBar = HomeSearchBarTableViewCell()
@@ -233,37 +234,13 @@ extension HomeViewController:FilterParams{
     func didChange() {
         filtered = isFiltered()
         if !loadingTime{
+            loadingTime = true
             myTableView.reloadSections([3,4,5,6,7,8], with: .automatic)
         }
-        loadingTime = true
+        requestTimer.invalidate()
+        requestTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(makeTimerRequest), userInfo: nil, repeats: false)
         
-        if filtered{
-            filterVacanciesPage = 1
-            // Получаем главный поток
-            let mainQueue = DispatchQueue.main
-
-            // Отменяем все текущие запросы в сеансе Alamofire в главном потоке
-            mainQueue.async {
-                Alamofire.Session.default.session.getAllTasks { tasks in
-                    tasks.forEach { $0.cancel() }
-                }
-                HomeNetworkService.getFilterVacancyData(page: String(describing:self.filterVacanciesPage), perPage: String(describing: 20)) {[self] vacancy in
-                    if vacancy != nil{
-                        HomeViewController.filterVacancies = vacancy?.response.data ?? []
-                    }
-                    loadingTime = false
-                    myTableView.reloadSections([3,4,5,6,7,8], with: .automatic)
-                   
-                }
-            }
-
-            
-            
-        }
-        else{
-            loadingTime = false
-            myTableView.reloadSections([3,4,5,6,7,8], with: .automatic)
-        }
+        
     }
     func isFiltered()->Bool{
         for i in HomeViewController.filterParams{
@@ -278,6 +255,26 @@ extension HomeViewController{
     @objc func closeInputView(){
         homeSearchBar.searchBar.resignFirstResponder()
         homeFilter.closeInputView()
+    }
+    @objc func makeTimerRequest(){
+        if filtered{
+            filterVacanciesPage = 1
+            
+            HomeNetworkService.getFilterVacancyData(page: String(describing:self.filterVacanciesPage), perPage: String(describing: 20)) {[self] vacancy in
+                if vacancy != nil{
+                    HomeViewController.filterVacancies = vacancy?.response.data ?? []
+                }
+                loadingTime = false
+                myTableView.reloadSections([3,4,5,6,7,8], with: .automatic)
+                
+            }
+            
+            
+        }
+        else{
+            loadingTime = false
+            myTableView.reloadSections([3,4,5,6,7,8], with: .automatic)
+        }
     }
 }
 extension HomeViewController{
