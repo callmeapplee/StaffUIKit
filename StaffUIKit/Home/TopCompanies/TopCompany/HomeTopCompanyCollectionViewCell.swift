@@ -12,6 +12,33 @@ class HomeTopCompanyCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var companyImage: UIImageView!
     static var myId = "HomeTopCompanyCollectionViewCell"
     static var uinib = UINib(nibName: "HomeTopCompanyCollectionViewCell", bundle: nil)
+    var companyDataService = CompanyDataService()
+    var company:HomeTopCompany!{
+        didSet{
+            var contains = false
+            for i in CompanyDataService.companiesDB{
+                if i.id == company.id{
+                    if i.logoURL == company.logo{
+                        contains = true
+                        companyImage.image = UIImage(data: i.logo!)
+                    }
+                    else{
+                        companyDataService.delete(companyDB: i)
+                    }
+                }
+            }
+            if !contains {
+                NetworkService.getImage(pathURL: company.logo) { [self] response in
+                    if let data = response{
+                        companyDataService.add(logoURl: company.logo, id: company.id, logo: data)
+                        companyImage.image = UIImage(data: data)
+                    }
+                    
+                }
+                
+            }
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()

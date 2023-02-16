@@ -5,7 +5,7 @@
         <attribute name="logo" optional="YES" attributeType="Binary"/>
         <attribute name="logoURL" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="VacancyDB" representedClassName="VacancyDB" syncable="YES" codeGenerationType="class">
+    <entity name="CompanyDB" representedClassName="CompanyDB" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="logo" optional="YES" attributeType="Binary"/>
         <attribute name="logoURL" optional="YES" attributeType="String"/>

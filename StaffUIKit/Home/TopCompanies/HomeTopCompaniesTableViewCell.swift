@@ -39,7 +39,7 @@ extension HomeTopCompaniesTableViewCell:UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = myCollectionView.dequeueReusableCell(withReuseIdentifier: HomeTopCompanyCollectionViewCell.myId, for: indexPath) as! HomeTopCompanyCollectionViewCell
-        
+        cell.company = HomeTopCompaniesTableViewCell.topCompanies[indexPath.row]
         return cell
     }
     

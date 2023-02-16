@@ -23,7 +23,7 @@ class HomeVacancyTableViewCell: UITableViewCell {
     @IBOutlet weak var salaryCount: UILabel!
     @IBOutlet weak var scheduleType: UILabel!
     private var _vacancy: VacancyDatum!
-    var homeDataService = VacancyDataService()
+    var companyDataService = CompanyDataService()
     var vacancy: VacancyDatum! {
         set {
             _vacancy = newValue
@@ -44,7 +44,7 @@ class HomeVacancyTableViewCell: UITableViewCell {
             }
             scheduleType.text = _vacancy.scheduleType.name
             var contains = false
-            for i in VacancyDataService.vacanciesDB{
+            for i in CompanyDataService.companiesDB{
                 if i.id == vacancy.employerID{
                     if i.logoURL == vacancy.employer.logo{
                         contains = true
@@ -52,14 +52,14 @@ class HomeVacancyTableViewCell: UITableViewCell {
                         shimmeringView.isShimmering = false
                     }
                     else{
-                        homeDataService.delete(vacancyDB: i)
+                        companyDataService.delete(companyDB: i)
                     }
                 }
             }
             if !contains {
                 NetworkService.getImage(pathURL: vacancy.employer.logo) { [self] response in
                     if let data = response{
-                        homeDataService.add(logoURl: vacancy.employer.logo, id: vacancy.employerID, logo: data)
+                        companyDataService.add(logoURl: vacancy.employer.logo, id: vacancy.employerID, logo: data)
                         companyLogo.image = UIImage(data: data)
                         shimmeringView.isShimmering = false
                     }
