@@ -39,7 +39,7 @@
 		FAC4723C299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC4723A299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.xib */; };
 		FAC47244299AA783003E1E3E /* HomeVacancyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC47242299AA783003E1E3E /* HomeVacancyTableViewCell.swift */; };
 		FAC47245299AA783003E1E3E /* HomeVacancyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC47243299AA783003E1E3E /* HomeVacancyTableViewCell.xib */; };
-		FAE520D4299CE9B200CDA618 /* VacancyDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE520D3299CE9B200CDA618 /* VacancyDataService.swift */; };
+		FAE520D4299CE9B200CDA618 /* CompanyDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE520D3299CE9B200CDA618 /* CompanyDataService.swift */; };
 		FAE520D7299CFA2F00CDA618 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE520D6299CFA2F00CDA618 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +80,7 @@
 		FAC4723A299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTopCompanyCollectionViewCell.xib; sourceTree = "<group>"; };
 		FAC47242299AA783003E1E3E /* HomeVacancyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVacancyTableViewCell.swift; sourceTree = "<group>"; };
 		FAC47243299AA783003E1E3E /* HomeVacancyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVacancyTableViewCell.xib; sourceTree = "<group>"; };
-		FAE520D3299CE9B200CDA618 /* VacancyDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyDataService.swift; sourceTree = "<group>"; };
+		FAE520D3299CE9B200CDA618 /* CompanyDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDataService.swift; sourceTree = "<group>"; };
 		FAE520D6299CFA2F00CDA618 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,7 +125,7 @@
 		FA09444E299E8DB800AA24AE /* DataService */ = {
 			isa = PBXGroup;
 			children = (
-				FAE520D3299CE9B200CDA618 /* VacancyDataService.swift */,
+				FAE520D3299CE9B200CDA618 /* CompanyDataService.swift */,
 				FA09444F299E8DF700AA24AE /* CategoryDataService.swift */,
 			);
 			path = DataService;
@@ -419,7 +419,7 @@
 				FAC4723B299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.swift in Sources */,
 				FA3183A4299A0E0D00DDDBD3 /* StaffUIKit.xcdatamodeld in Sources */,
 				FA094450299E8DF700AA24AE /* CategoryDataService.swift in Sources */,
-				FAE520D4299CE9B200CDA618 /* VacancyDataService.swift in Sources */,
+				FAE520D4299CE9B200CDA618 /* CompanyDataService.swift in Sources */,
 				FA73C05E299BB4010099A514 /* Helper.swift in Sources */,
 				FA3183B9299A12CD00DDDBD3 /* HomeHeaderTableViewCell.swift in Sources */,
 				FA73C061299BB5190099A514 /* UserInfo.swift in Sources */,

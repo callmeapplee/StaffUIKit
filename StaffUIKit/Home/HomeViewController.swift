@@ -269,7 +269,7 @@ extension HomeViewController{
                     HomeViewController.filterVacancies = vacancy?.response.data ?? []
                 }
                 loadingTime = false
-                myTableView.reloadSections([3,4,5,6,7,8], with: .automatic)
+                myTableView.reloadSections([3,4,5,6,7,8], with: .none)
                 
             }
             
@@ -277,7 +277,7 @@ extension HomeViewController{
         }
         else{
             loadingTime = false
-            myTableView.reloadSections([3,4,5,6,7,8], with: .automatic)
+            myTableView.reloadSections([3,4,5,6,7,8], with: .none)
         }
     }
 }
@@ -285,8 +285,8 @@ extension HomeViewController{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
-        print(scrollView.frame.height,offsetY,contentHeight)
-        if offsetY > contentHeight - scrollView.frame.height + scrollView.frame.height / 5  {
+        print(loadingTime)
+        if offsetY > contentHeight - scrollView.frame.height + 30 {
             if filtered && !filterVacancyFetchingMore{
                 filterVacanciesPage += 1
                 filterVacancyFetchingMore = true
