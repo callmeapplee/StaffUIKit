@@ -1,22 +1,22 @@
 //
-//  HomeFilterTableViewCell.swift
+//  CompaniesFilterTableViewCell.swift
 //  StaffUIKit
 //
-//  Created by Ботурбек Имомдодов on 13/02/23.
+//  Created by Ботурбек Имомдодов on 17/02/23.
 //
 
 import UIKit
 
-class HomeFilterTableViewCell: UITableViewCell {
-    static var myId = "HomeFilterTableViewCell"
-    static var uinib = UINib(nibName: "HomeFilterTableViewCell", bundle: nil)
+class CompaniesFilterTableViewCell: UITableViewCell {
+    static var myId = "CompaniesFilterTableViewCell"
+    static var uinib = UINib(nibName: "CompaniesFilterTableViewCell", bundle: nil)
     var citiesPicker = UIPickerView()
     var categoriesPicker = UIPickerView()
     var filterDelegate:FilterParams?
+    
+    @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
-    @IBOutlet weak var filterBtn: UIButton!
-    @IBOutlet weak var filterView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
@@ -26,8 +26,6 @@ class HomeFilterTableViewCell: UITableViewCell {
     func setup(){
         
         filterView.layer.cornerRadius = 12
-        filterBtn.layer.cornerRadius = 8
-        filterBtn.clipsToBounds = true
         citiesPicker.delegate = self
         citiesPicker.dataSource = self
         categoriesPicker.delegate = self
@@ -59,7 +57,7 @@ class HomeFilterTableViewCell: UITableViewCell {
     
 }
 
-extension HomeFilterTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource {
+extension CompaniesFilterTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -83,19 +81,19 @@ extension HomeFilterTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if citiesPicker == pickerView{
             if row == 0{
-                HomeViewController.filterParams[1] = ""
+                CompaniesViewController.filterParams[1] = ""
             }
             else{
-                HomeViewController.filterParams[1] = "&city_id=\(StaticData.cities[row].id)"
+                CompaniesViewController.filterParams[1] = "&city_id=\(StaticData.cities[row].id)"
             }
             cityTextField.text =  StaticData.cities[row].nameRu
         }
         else{
             if row == 0{
-                HomeViewController.filterParams[2] = ""
+                CompaniesViewController.filterParams[2] = ""
             }
             else{
-                HomeViewController.filterParams[2] = "&category_id=\(StaticData.categories[row].id)"
+                CompaniesViewController.filterParams[2] = "&category_id=\(StaticData.categories[row].id)"
             }
             categoryTextField.text = StaticData.categories[row].name
             
@@ -104,7 +102,7 @@ extension HomeFilterTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource 
     }
     
 }
-extension HomeFilterTableViewCell{
+extension CompaniesFilterTableViewCell{
     @objc func closeInputView(){
         cityTextField.resignFirstResponder()
         categoryTextField.resignFirstResponder()

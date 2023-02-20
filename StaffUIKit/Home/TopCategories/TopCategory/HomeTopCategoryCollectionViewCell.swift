@@ -14,7 +14,7 @@ class HomeTopCategoryCollectionViewCell: UICollectionViewCell {
     static var myId = "HomeTopCategoryCollectionViewCell"
     static var uinib = UINib(nibName: "HomeTopCategoryCollectionViewCell", bundle: nil)
     var categoryDataService = CategoryDataService()
-    var category:HomeTopCategory!{
+    var category:TopCategory!{
         didSet{
             categoryName.text = category.name
             var contains = false

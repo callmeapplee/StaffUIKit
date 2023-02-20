@@ -10,20 +10,33 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
+    let companyDataService = CompanyDataService()
+    let categoryDataService = CategoryDataService()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        if (UserInfo.defaults.integer(forKey: "languageID") == 0){
-            UserInfo.defaults.set(2, forKey: "languageID")
-        }
-        
-        let companyDataService = CompanyDataService()
-        companyDataService.fetchingData()
+        prepareBeforeAppear()
+        fetchingData()
+        configureTabBar()
         // Override point for customization after application launch.
         return true
     }
-
+    func prepareBeforeAppear(){
+        if (UserInfo.defaults.integer(forKey: "languageID") == 0){
+            UserInfo.defaults.set(2, forKey: "languageID")
+        }
+        fetchingData()
+        
+    }
+    // MARK: Fetching data from DataBase with using Core Data
+    func fetchingData(){
+        categoryDataService.fetchingData()
+        companyDataService.fetchingData()
+    }
+    // MARK: Configure Tab Bar
+    func configureTabBar(){
+        UITabBar.appearance().unselectedItemTintColor = UIColor(cgColor: CGColor(red: 77/255, green: 214/255, blue: 140/255, alpha: 1))
+        UITabBar.appearance().tintColor = UIColor(cgColor: CGColor(red: 1, green: 108/255, blue: 47/255, alpha: 1))
+    }
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

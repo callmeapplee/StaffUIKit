@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     var homeSearchBar = HomeSearchBarTableViewCell()
     var homeFilter = HomeFilterTableViewCell()
     var filtered = false
-    static var activeVacancies:[VacancyDatum] = []
+    static var activeCompanies:[VacancyDatum] = []
     static var filterVacancies:[VacancyDatum] = []
     static var filterParams = ["","","","","","",""]
     var activeVacanciesPage = 1
@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
         myTableView.register(HomeTopCategoriesTableViewCell.uinib, forCellReuseIdentifier: HomeTopCategoriesTableViewCell.myId)
         myTableView.register(HomeTopCompaniesTableViewCell.uinib, forCellReuseIdentifier: HomeTopCompaniesTableViewCell.myId)
         myTableView.register(HomeVacancyTableViewCell.uinib, forCellReuseIdentifier: HomeVacancyTableViewCell.myId)
-        myTableView.register(HomeIndicatorTableViewCell.uinib, forCellReuseIdentifier: HomeIndicatorTableViewCell.myId)
+        myTableView.register(IndicatorTableViewCell.uinib, forCellReuseIdentifier: IndicatorTableViewCell.myId)
         
     }
     func setup(){
@@ -50,18 +50,18 @@ class HomeViewController: UIViewController {
         self.view.addGestureRecognizer(backgroundTap)
         HomeNetworkService.getHomeData { [self] home in
             if home != nil{
-                HomeTopCompaniesTableViewCell.topCompanies = home?.response.topCompanies ?? []
-                HomeTopCategoriesTableViewCell.topCategories = home?.response.topCategories ?? []
-                HomeFilterTableViewCell.cities = home?.response.cities ?? []
-                HomeFilterTableViewCell.categories = home?.response.topCategories ?? []
-                HomeFilterTableViewCell.cities.insert(HomeCity(id: 0, nameTj: "Все города", nameRu: "Все города", nameEn: "Все города", status: 0), at: 0)
-                HomeFilterTableViewCell.categories.insert(HomeTopCategory(id: 0, name: "Все категории", icon: ""), at: 0)
+                StaticData.topCompanies = home?.response.topCompanies ?? []
+                StaticData.topCategories = home?.response.topCategories ?? []
+                StaticData.cities = home?.response.cities ?? []
+                StaticData.categories = home?.response.topCategories ?? []
+                StaticData.cities.insert(City(id: 0, nameTj: "Все города", nameRu: "Все города", nameEn: "Все города", status: 0), at: 0)
+                StaticData.categories.insert(TopCategory(id: 0, name: "Все категории", icon: ""), at: 0)
                 myTableView.reloadData()
             }
         }
         HomeNetworkService.getActiveVacancyData(page: String(describing: 1), perPage: String(describing: 20)) {[self] vacancy in
             if vacancy != nil{
-                HomeViewController.activeVacancies = vacancy?.response.data ?? []
+                HomeViewController.activeCompanies = vacancy?.response.data ?? []
                 myTableView.reloadData()
             }
         }
@@ -80,7 +80,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 6{
-            return HomeViewController.activeVacancies.count
+            return HomeViewController.activeCompanies.count
         }
         else if section == 7{
             return HomeViewController.filterVacancies.count
@@ -204,7 +204,7 @@ extension HomeViewController:UITableViewDataSource{
         else if section == 6{
             let cell = myTableView.dequeueReusableCell(withIdentifier: HomeVacancyTableViewCell.myId, for: indexPath) as! HomeVacancyTableViewCell
             let row = indexPath.row
-            cell.vacancy = HomeViewController.activeVacancies[row]
+            cell.vacancy = HomeViewController.activeCompanies[row]
             
             cell.selectionStyle = .none
             return cell
@@ -219,7 +219,7 @@ extension HomeViewController:UITableViewDataSource{
             return cell
         }
         else if section == 8{
-            let cell = myTableView.dequeueReusableCell(withIdentifier: HomeIndicatorTableViewCell.myId) as! HomeIndicatorTableViewCell
+            let cell = myTableView.dequeueReusableCell(withIdentifier: IndicatorTableViewCell.myId) as! IndicatorTableViewCell
             cell.indicator.startAnimating()
             
             return cell
@@ -309,7 +309,7 @@ extension HomeViewController{
                         activeVacancyFetchingMore = false
                         let temp = vacancy?.response.data ?? []
                         for i in temp{
-                            HomeViewController.activeVacancies.append(i)
+                            HomeViewController.activeCompanies.append(i)
                         }
                         myTableView.reloadData()
                     }

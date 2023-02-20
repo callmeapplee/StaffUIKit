@@ -13,11 +13,11 @@ struct Home: Codable {
 
 // MARK: - Response
 struct HomeResponse: Codable {
-    let topCategories: [HomeTopCategory]
-    let topCompanies: [HomeTopCompany]
-    let cities: [HomeCity]
-    let scheduleTypes: [HomeScheduleType]
-    let experiences: [HomeExperience]
+    let topCategories: [TopCategory]
+    let topCompanies: [TopCompany]
+    let cities: [City]
+    let scheduleTypes: [ScheduleType]
+    let experiences: [Experience]
 
     enum CodingKeys: String, CodingKey {
         case topCategories = "top_categories"
@@ -29,7 +29,7 @@ struct HomeResponse: Codable {
 }
 
 // MARK: - City
-struct HomeCity: Codable {
+struct City: Codable {
     let id: Int
     let nameTj, nameRu, nameEn: String
     let status: Int
@@ -43,26 +43,26 @@ struct HomeCity: Codable {
 }
 
 // MARK: - Experience
-struct HomeExperience: Codable {
+struct Experience: Codable {
     let id: Int
     let name: String
 }
 
 // MARK: - ScheduleType
-struct HomeScheduleType: Codable {
+struct ScheduleType: Codable {
     let id: Int
     let name: String
     let status: Int
 }
 
 // MARK: - TopCategory
-struct HomeTopCategory: Codable {
+struct TopCategory: Codable {
     let id: Int
     let name, icon: String
 }
 
 // MARK: - TopCompany
-struct HomeTopCompany: Codable {
+struct TopCompany: Codable {
     let id: Int
     let name, logo: String
     //let logo: HomeLogo

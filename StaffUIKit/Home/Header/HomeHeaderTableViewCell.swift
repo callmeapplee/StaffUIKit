@@ -10,7 +10,7 @@ import UIKit
 class HomeHeaderTableViewCell: UITableViewCell {
     static var myId = "HomeHeaderTableViewCell"
     static var uinib = UINib(nibName: "HomeHeaderTableViewCell", bundle: nil)
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage: UIButton!
     @IBOutlet weak var notificationCount: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,6 +18,7 @@ class HomeHeaderTableViewCell: UITableViewCell {
         // Initialization code
     }
     func setup(){
+        profileImage.layer.masksToBounds = true
         notificationCount.layer.cornerRadius = notificationCount.frame.width / 2
         profileImage.layer.cornerRadius = profileImage.frame.width / 2
         profileImage.layer.borderWidth = 3

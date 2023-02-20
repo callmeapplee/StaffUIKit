@@ -1,17 +1,18 @@
 //
-//  HomeTopCompanyCollectionViewCell.swift
+//  CompaniesTopCompanyCollectionViewCell.swift
 //  StaffUIKit
 //
-//  Created by Ботурбек Имомдодов on 13/02/23.
+//  Created by Ботурбек Имомдодов on 20/02/23.
 //
 
 import UIKit
 
-class HomeTopCompanyCollectionViewCell: UICollectionViewCell {
+class CompaniesTopCompanyCollectionViewCell: UICollectionViewCell {
+
     @IBOutlet weak var companyView: UIView!
     @IBOutlet weak var companyImage: UIImageView!
-    static var myId = "HomeTopCompanyCollectionViewCell"
-    static var uinib = UINib(nibName: "HomeTopCompanyCollectionViewCell", bundle: nil)
+    static var myId = "CompaniesTopCompanyCollectionViewCell"
+    static var uinib = UINib(nibName: "CompaniesTopCompanyCollectionViewCell", bundle: nil)
     var companyDataService = CompanyDataService()
     var company:TopCompany!{
         didSet{

@@ -1,15 +1,15 @@
 //
-//  HomeTopCompaniesTableViewCell.swift
+//  CompaniesTopCompanyTableViewCell.swift
 //  StaffUIKit
 //
-//  Created by Ботурбек Имомдодов on 13/02/23.
+//  Created by Ботурбек Имомдодов on 20/02/23.
 //
 
 import UIKit
 
-class HomeTopCompaniesTableViewCell: UITableViewCell {
-    static var myId = "HomeTopCompaniesTableViewCell"
-    static var uinib = UINib(nibName: "HomeTopCompaniesTableViewCell", bundle: nil)
+class CompaniesTopCompanyTableViewCell: UITableViewCell {
+    static var myId = "CompaniesTopCompanyTableViewCell"
+    static var uinib = UINib(nibName: "CompaniesTopCompanyTableViewCell", bundle: nil)
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     override func awakeFromNib() {
@@ -29,10 +29,7 @@ class HomeTopCompaniesTableViewCell: UITableViewCell {
     }
     
 }
-extension HomeTopCompaniesTableViewCell:UICollectionViewDelegate{
-    
-}
-extension HomeTopCompaniesTableViewCell:UICollectionViewDataSource{
+extension CompaniesTopCompanyTableViewCell:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return StaticData.topCompanies.count
     }
@@ -45,7 +42,7 @@ extension HomeTopCompaniesTableViewCell:UICollectionViewDataSource{
     
     
 }
-extension HomeTopCompaniesTableViewCell:UICollectionViewDelegateFlowLayout{
+extension CompaniesTopCompanyTableViewCell:UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 74, height: 74)
     }

@@ -8,9 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		3A0DC4542E520CE48DE5827C /* Pods_StaffUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB199641CC6399D6AC2EC39 /* Pods_StaffUIKit.framework */; };
-		FA09444C299E8C5000AA24AE /* HomeIndicatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09444A299E8C5000AA24AE /* HomeIndicatorTableViewCell.swift */; };
-		FA09444D299E8C5000AA24AE /* HomeIndicatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA09444B299E8C5000AA24AE /* HomeIndicatorTableViewCell.xib */; };
+		FA09444C299E8C5000AA24AE /* IndicatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09444A299E8C5000AA24AE /* IndicatorTableViewCell.swift */; };
+		FA09444D299E8C5000AA24AE /* IndicatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA09444B299E8C5000AA24AE /* IndicatorTableViewCell.xib */; };
 		FA094450299E8DF700AA24AE /* CategoryDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09444F299E8DF700AA24AE /* CategoryDataService.swift */; };
+		FA094453299F517B00AA24AE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA094452299F517B00AA24AE /* ProfileViewController.swift */; };
+		FA094456299F572C00AA24AE /* CompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA094455299F572C00AA24AE /* CompaniesViewController.swift */; };
+		FA09445E299F59CD00AA24AE /* CompaniesHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09445C299F59CD00AA24AE /* CompaniesHeaderTableViewCell.swift */; };
+		FA09445F299F59CD00AA24AE /* CompaniesHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA09445D299F59CD00AA24AE /* CompaniesHeaderTableViewCell.xib */; };
+		FA094463299F801900AA24AE /* CompaniesSearchBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA094461299F801900AA24AE /* CompaniesSearchBarTableViewCell.swift */; };
+		FA094464299F801900AA24AE /* CompaniesSearchBarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA094462299F801900AA24AE /* CompaniesSearchBarTableViewCell.xib */; };
+		FA094468299F813C00AA24AE /* CompaniesFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA094466299F813C00AA24AE /* CompaniesFilterTableViewCell.swift */; };
+		FA094469299F813C00AA24AE /* CompaniesFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA094467299F813C00AA24AE /* CompaniesFilterTableViewCell.xib */; };
+		FA09446B299F81D700AA24AE /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09446A299F81D700AA24AE /* StaticData.swift */; };
+		FA09446F299F846800AA24AE /* CompaniesCompanyCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09446D299F846800AA24AE /* CompaniesCompanyCellTableViewCell.swift */; };
+		FA094470299F846800AA24AE /* CompaniesCompanyCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA09446E299F846800AA24AE /* CompaniesCompanyCellTableViewCell.xib */; };
+		FA094475299F882A00AA24AE /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA094474299F882A00AA24AE /* CompanyModel.swift */; };
 		FA31839A299A0E0D00DDDBD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA318399299A0E0D00DDDBD3 /* AppDelegate.swift */; };
 		FA31839C299A0E0D00DDDBD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31839B299A0E0D00DDDBD3 /* SceneDelegate.swift */; };
 		FA3183A1299A0E0D00DDDBD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA31839F299A0E0D00DDDBD3 /* Main.storyboard */; };
@@ -28,6 +40,10 @@
 		FA73C05B299BAFBE0099A514 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73C05A299BAFBE0099A514 /* HomeModel.swift */; };
 		FA73C05E299BB4010099A514 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73C05D299BB4010099A514 /* Helper.swift */; };
 		FA73C061299BB5190099A514 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73C060299BB5190099A514 /* UserInfo.swift */; };
+		FAA8A11529A3414100B669B6 /* CompaniesTopCompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8A11329A3414100B669B6 /* CompaniesTopCompanyTableViewCell.swift */; };
+		FAA8A11629A3414100B669B6 /* CompaniesTopCompanyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA8A11429A3414100B669B6 /* CompaniesTopCompanyTableViewCell.xib */; };
+		FAA8A11A29A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8A11829A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.swift */; };
+		FAA8A11B29A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA8A11929A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.xib */; };
 		FABCA4F7299C883D00989688 /* VacancyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCA4F6299C883D00989688 /* VacancyModel.swift */; };
 		FAC47224299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC47222299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.swift */; };
 		FAC47225299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC47223299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.xib */; };
@@ -47,9 +63,21 @@
 		4FB199641CC6399D6AC2EC39 /* Pods_StaffUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaffUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9052BDB17962AFF0390C449 /* Pods-StaffUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaffUIKit.release.xcconfig"; path = "Target Support Files/Pods-StaffUIKit/Pods-StaffUIKit.release.xcconfig"; sourceTree = "<group>"; };
 		BFF772D4C2EE556C1C903839 /* Pods-StaffUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaffUIKit.debug.xcconfig"; path = "Target Support Files/Pods-StaffUIKit/Pods-StaffUIKit.debug.xcconfig"; sourceTree = "<group>"; };
-		FA09444A299E8C5000AA24AE /* HomeIndicatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIndicatorTableViewCell.swift; sourceTree = "<group>"; };
-		FA09444B299E8C5000AA24AE /* HomeIndicatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeIndicatorTableViewCell.xib; sourceTree = "<group>"; };
+		FA09444A299E8C5000AA24AE /* IndicatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorTableViewCell.swift; sourceTree = "<group>"; };
+		FA09444B299E8C5000AA24AE /* IndicatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndicatorTableViewCell.xib; sourceTree = "<group>"; };
 		FA09444F299E8DF700AA24AE /* CategoryDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataService.swift; sourceTree = "<group>"; };
+		FA094452299F517B00AA24AE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FA094455299F572C00AA24AE /* CompaniesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesViewController.swift; sourceTree = "<group>"; };
+		FA09445C299F59CD00AA24AE /* CompaniesHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		FA09445D299F59CD00AA24AE /* CompaniesHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompaniesHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		FA094461299F801900AA24AE /* CompaniesSearchBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesSearchBarTableViewCell.swift; sourceTree = "<group>"; };
+		FA094462299F801900AA24AE /* CompaniesSearchBarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompaniesSearchBarTableViewCell.xib; sourceTree = "<group>"; };
+		FA094466299F813C00AA24AE /* CompaniesFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesFilterTableViewCell.swift; sourceTree = "<group>"; };
+		FA094467299F813C00AA24AE /* CompaniesFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompaniesFilterTableViewCell.xib; sourceTree = "<group>"; };
+		FA09446A299F81D700AA24AE /* StaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
+		FA09446D299F846800AA24AE /* CompaniesCompanyCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesCompanyCellTableViewCell.swift; sourceTree = "<group>"; };
+		FA09446E299F846800AA24AE /* CompaniesCompanyCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompaniesCompanyCellTableViewCell.xib; sourceTree = "<group>"; };
+		FA094474299F882A00AA24AE /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 		FA318396299A0E0D00DDDBD3 /* StaffUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaffUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA318399299A0E0D00DDDBD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA31839B299A0E0D00DDDBD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +97,10 @@
 		FA73C05A299BAFBE0099A514 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		FA73C05D299BB4010099A514 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		FA73C060299BB5190099A514 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		FAA8A11329A3414100B669B6 /* CompaniesTopCompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesTopCompanyTableViewCell.swift; sourceTree = "<group>"; };
+		FAA8A11429A3414100B669B6 /* CompaniesTopCompanyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompaniesTopCompanyTableViewCell.xib; sourceTree = "<group>"; };
+		FAA8A11829A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesTopCompanyCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAA8A11929A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompaniesTopCompanyCollectionViewCell.xib; sourceTree = "<group>"; };
 		FABCA4F6299C883D00989688 /* VacancyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyModel.swift; sourceTree = "<group>"; };
 		FAC47222299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopCategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		FAC47223299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTopCategoriesTableViewCell.xib; sourceTree = "<group>"; };
@@ -116,8 +148,8 @@
 		FA094449299E8C3000AA24AE /* Indicator */ = {
 			isa = PBXGroup;
 			children = (
-				FA09444A299E8C5000AA24AE /* HomeIndicatorTableViewCell.swift */,
-				FA09444B299E8C5000AA24AE /* HomeIndicatorTableViewCell.xib */,
+				FA09444A299E8C5000AA24AE /* IndicatorTableViewCell.swift */,
+				FA09444B299E8C5000AA24AE /* IndicatorTableViewCell.xib */,
 			);
 			path = Indicator;
 			sourceTree = "<group>";
@@ -129,6 +161,64 @@
 				FA09444F299E8DF700AA24AE /* CategoryDataService.swift */,
 			);
 			path = DataService;
+			sourceTree = "<group>";
+		};
+		FA094451299F515800AA24AE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FA094452299F517B00AA24AE /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FA094454299F56EE00AA24AE /* Comapny */ = {
+			isa = PBXGroup;
+			children = (
+				FAA8A11229A3411B00B669B6 /* TopCompanyTVC */,
+				FA09446C299F844A00AA24AE /* CompanyCell */,
+				FA094465299F811C00AA24AE /* Filter */,
+				FA094460299F7FFD00AA24AE /* SearchBar */,
+				FA094457299F596C00AA24AE /* Header */,
+				FA094455299F572C00AA24AE /* CompaniesViewController.swift */,
+			);
+			path = Comapny;
+			sourceTree = "<group>";
+		};
+		FA094457299F596C00AA24AE /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				FA09445C299F59CD00AA24AE /* CompaniesHeaderTableViewCell.swift */,
+				FA09445D299F59CD00AA24AE /* CompaniesHeaderTableViewCell.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		FA094460299F7FFD00AA24AE /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				FA094461299F801900AA24AE /* CompaniesSearchBarTableViewCell.swift */,
+				FA094462299F801900AA24AE /* CompaniesSearchBarTableViewCell.xib */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		FA094465299F811C00AA24AE /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				FA094466299F813C00AA24AE /* CompaniesFilterTableViewCell.swift */,
+				FA094467299F813C00AA24AE /* CompaniesFilterTableViewCell.xib */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		FA09446C299F844A00AA24AE /* CompanyCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA09446D299F846800AA24AE /* CompaniesCompanyCellTableViewCell.swift */,
+				FA09446E299F846800AA24AE /* CompaniesCompanyCellTableViewCell.xib */,
+				FA094474299F882A00AA24AE /* CompanyModel.swift */,
+			);
+			path = CompanyCell;
 			sourceTree = "<group>";
 		};
 		FA31838D299A0E0D00DDDBD3 = {
@@ -152,12 +242,15 @@
 		FA318398299A0E0D00DDDBD3 /* StaffUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				FAA8A11C29A3447500B669B6 /* GeneralCell */,
 				FA3183B1299A0E6600DDDBD3 /* App */,
 				FA09444E299E8DB800AA24AE /* DataService */,
 				FAE520D5299CFA1B00CDA618 /* NetworkService */,
 				FA73C05F299BB5060099A514 /* UserInfo */,
 				FA73C05C299BB3F40099A514 /* Helper */,
+				FA094451299F515800AA24AE /* Profile */,
 				FA3183B0299A0E5E00DDDBD3 /* Home */,
+				FA094454299F56EE00AA24AE /* Comapny */,
 				FA3183A5299A0E0E00DDDBD3 /* Assets.xcassets */,
 				FA31839F299A0E0D00DDDBD3 /* Main.storyboard */,
 				FA3183A7299A0E0E00DDDBD3 /* LaunchScreen.storyboard */,
@@ -170,7 +263,6 @@
 		FA3183B0299A0E5E00DDDBD3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				FA094449299E8C3000AA24AE /* Indicator */,
 				FAC4723D299AA1EE003E1E3E /* Vacancies */,
 				FAC4722F299A990E003E1E3E /* TopCompanies */,
 				FAC4721D299A3D7F003E1E3E /* TopCategories */,
@@ -224,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				FA73C05D299BB4010099A514 /* Helper.swift */,
+				FA09446A299F81D700AA24AE /* StaticData.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -234,6 +327,33 @@
 				FA73C060299BB5190099A514 /* UserInfo.swift */,
 			);
 			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		FAA8A11229A3411B00B669B6 /* TopCompanyTVC */ = {
+			isa = PBXGroup;
+			children = (
+				FAA8A11729A3422100B669B6 /* TopCompanyCVC */,
+				FAA8A11329A3414100B669B6 /* CompaniesTopCompanyTableViewCell.swift */,
+				FAA8A11429A3414100B669B6 /* CompaniesTopCompanyTableViewCell.xib */,
+			);
+			path = TopCompanyTVC;
+			sourceTree = "<group>";
+		};
+		FAA8A11729A3422100B669B6 /* TopCompanyCVC */ = {
+			isa = PBXGroup;
+			children = (
+				FAA8A11829A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.swift */,
+				FAA8A11929A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.xib */,
+			);
+			path = TopCompanyCVC;
+			sourceTree = "<group>";
+		};
+		FAA8A11C29A3447500B669B6 /* GeneralCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA094449299E8C3000AA24AE /* Indicator */,
+			);
+			path = GeneralCell;
 			sourceTree = "<group>";
 		};
 		FAC4721D299A3D7F003E1E3E /* TopCategories */ = {
@@ -354,16 +474,22 @@
 			files = (
 				FAC47225299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.xib in Resources */,
 				FA3183A9299A0E0E00DDDBD3 /* LaunchScreen.storyboard in Resources */,
+				FAA8A11B29A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.xib in Resources */,
 				FA3183BF299A2CD500DDDBD3 /* HomeSearchBarTableViewCell.xib in Resources */,
 				FAC47237299A995C003E1E3E /* HomeTopCompaniesTableViewCell.xib in Resources */,
 				FA3183C4299A315F00DDDBD3 /* HomeFilterTableViewCell.xib in Resources */,
+				FAA8A11629A3414100B669B6 /* CompaniesTopCompanyTableViewCell.xib in Resources */,
 				FA3183BA299A12CD00DDDBD3 /* HomeHeaderTableViewCell.xib in Resources */,
+				FA09445F299F59CD00AA24AE /* CompaniesHeaderTableViewCell.xib in Resources */,
 				FAC47245299AA783003E1E3E /* HomeVacancyTableViewCell.xib in Resources */,
 				FA3183A6299A0E0E00DDDBD3 /* Assets.xcassets in Resources */,
-				FA09444D299E8C5000AA24AE /* HomeIndicatorTableViewCell.xib in Resources */,
+				FA09444D299E8C5000AA24AE /* IndicatorTableViewCell.xib in Resources */,
 				FAC4723C299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.xib in Resources */,
+				FA094469299F813C00AA24AE /* CompaniesFilterTableViewCell.xib in Resources */,
 				FA3183A1299A0E0D00DDDBD3 /* Main.storyboard in Resources */,
 				FAC4722E299A4192003E1E3E /* HomeTopCategoryCollectionViewCell.xib in Resources */,
+				FA094464299F801900AA24AE /* CompaniesSearchBarTableViewCell.xib in Resources */,
+				FA094470299F846800AA24AE /* CompaniesCompanyCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,18 +546,28 @@
 				FA3183A4299A0E0D00DDDBD3 /* StaffUIKit.xcdatamodeld in Sources */,
 				FA094450299E8DF700AA24AE /* CategoryDataService.swift in Sources */,
 				FAE520D4299CE9B200CDA618 /* CompanyDataService.swift in Sources */,
+				FA094475299F882A00AA24AE /* CompanyModel.swift in Sources */,
+				FAA8A11529A3414100B669B6 /* CompaniesTopCompanyTableViewCell.swift in Sources */,
 				FA73C05E299BB4010099A514 /* Helper.swift in Sources */,
 				FA3183B9299A12CD00DDDBD3 /* HomeHeaderTableViewCell.swift in Sources */,
+				FA094453299F517B00AA24AE /* ProfileViewController.swift in Sources */,
+				FA09446F299F846800AA24AE /* CompaniesCompanyCellTableViewCell.swift in Sources */,
+				FA094456299F572C00AA24AE /* CompaniesViewController.swift in Sources */,
+				FA09445E299F59CD00AA24AE /* CompaniesHeaderTableViewCell.swift in Sources */,
+				FA094468299F813C00AA24AE /* CompaniesFilterTableViewCell.swift in Sources */,
 				FA73C061299BB5190099A514 /* UserInfo.swift in Sources */,
 				FA3183C3299A315F00DDDBD3 /* HomeFilterTableViewCell.swift in Sources */,
 				FA73C058299B7BF60099A514 /* HomeNetworkService.swift in Sources */,
-				FA09444C299E8C5000AA24AE /* HomeIndicatorTableViewCell.swift in Sources */,
+				FA09444C299E8C5000AA24AE /* IndicatorTableViewCell.swift in Sources */,
+				FA09446B299F81D700AA24AE /* StaticData.swift in Sources */,
 				FAC47224299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.swift in Sources */,
 				FAC4722D299A4192003E1E3E /* HomeTopCategoryCollectionViewCell.swift in Sources */,
 				FAC47244299AA783003E1E3E /* HomeVacancyTableViewCell.swift in Sources */,
 				FA3183BE299A2CD500DDDBD3 /* HomeSearchBarTableViewCell.swift in Sources */,
 				FAC47236299A995C003E1E3E /* HomeTopCompaniesTableViewCell.swift in Sources */,
+				FA094463299F801900AA24AE /* CompaniesSearchBarTableViewCell.swift in Sources */,
 				FA73C05B299BAFBE0099A514 /* HomeModel.swift in Sources */,
+				FAA8A11A29A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.swift in Sources */,
 				FA31839A299A0E0D00DDDBD3 /* AppDelegate.swift in Sources */,
 				FAE520D7299CFA2F00CDA618 /* NetworkService.swift in Sources */,
 				FABCA4F7299C883D00989688 /* VacancyModel.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  HomeIndicatorTableViewCell.swift
+//  IndicatorTableViewCell.swift
 //  StaffUIKit
 //
 //  Created by Ботурбек Имомдодов on 16/02/23.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class HomeIndicatorTableViewCell: UITableViewCell {
-    static var myId = "HomeIndicatorTableViewCell"
-    static var uinib = UINib(nibName: "HomeIndicatorTableViewCell", bundle: nil)
+class IndicatorTableViewCell: UITableViewCell {
+    static var myId = "IndicatorTableViewCell"
+    static var uinib = UINib(nibName: "IndicatorTableViewCell", bundle: nil)
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     override func awakeFromNib() {
