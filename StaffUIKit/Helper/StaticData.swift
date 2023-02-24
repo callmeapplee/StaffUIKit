@@ -7,9 +7,10 @@
 
 import Foundation
 class StaticData{
-    
     static var topCategories:[TopCategory] = []
     static var cities:[City] = []
     static var categories:[TopCategory] = []
     static var topCompanies:[TopCompany] = []
+    static var scheduleTypes: [ScheduleType] = [] 
+    static var experiences:[Experience] = []
 }

@@ -40,7 +40,7 @@ class CompaniesViewController: UIViewController {
         myTableView.register(CompaniesSearchBarTableViewCell.uinib, forCellReuseIdentifier: CompaniesSearchBarTableViewCell.myId)
         myTableView.register(CompaniesFilterTableViewCell.uinib, forCellReuseIdentifier: CompaniesFilterTableViewCell.myId)
         myTableView.register(CompaniesTopCompanyTableViewCell.uinib, forCellReuseIdentifier: CompaniesTopCompanyTableViewCell.myId)
-        myTableView.register(CompaniesCompanyTableViewCell.uinib, forCellReuseIdentifier: CompaniesCompanyTableViewCell.myId)
+        myTableView.register(CompanyTableViewCell.uinib, forCellReuseIdentifier: CompanyTableViewCell.myId)
         myTableView.register(IndicatorTableViewCell.uinib, forCellReuseIdentifier: IndicatorTableViewCell.myId)
     }
     func setup(){
@@ -167,7 +167,7 @@ extension CompaniesViewController:UITableViewDataSource{
             return cell
         }
         else if section == 5{
-            let cell = myTableView.dequeueReusableCell(withIdentifier: CompaniesCompanyTableViewCell.myId, for: indexPath) as! CompaniesCompanyTableViewCell
+            let cell = myTableView.dequeueReusableCell(withIdentifier: CompanyTableViewCell.myId, for: indexPath) as! CompanyTableViewCell
             let row = indexPath.row
            // cell.vacancy = HomeViewController.activeVacancies[row]
             
@@ -175,7 +175,7 @@ extension CompaniesViewController:UITableViewDataSource{
             return cell
         }
         else if section == 6{
-            let cell = myTableView.dequeueReusableCell(withIdentifier: CompaniesCompanyTableViewCell.myId, for: indexPath) as! CompaniesCompanyTableViewCell
+            let cell = myTableView.dequeueReusableCell(withIdentifier: CompanyTableViewCell.myId, for: indexPath) as! CompanyTableViewCell
             let row = indexPath.row
             
        //     cell.vacancy = HomeViewController.filterVacancies[row]

@@ -8,4 +8,5 @@ target 'StaffUIKit' do
   # Pods for StaffUIKit
 pod 'ShimmerSwift'
 pod 'Alamofire'
+pod 'WARangeSlider'
 end

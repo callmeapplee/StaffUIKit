@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.6.4)
   - ShimmerSwift (2.1.1)
+  - WARangeSlider (1.1.1)
 
 DEPENDENCIES:
   - Alamofire
   - ShimmerSwift
+  - WARangeSlider
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - ShimmerSwift
+    - WARangeSlider
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   ShimmerSwift: f7ed2daf9c246de8299dfd9e12c6ab465cba9842
+  WARangeSlider: 54b3e0853b8d16c444fd539005901aecee86837d
 
-PODFILE CHECKSUM: dff60edd6e3f7cfb9850df34971b9f1fb64ebe88
+PODFILE CHECKSUM: ac17a6fa2e4b68177ef361dd2de276707a67efcc
 
 COCOAPODS: 1.11.3

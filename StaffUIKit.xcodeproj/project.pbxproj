@@ -20,8 +20,8 @@
 		FA094468299F813C00AA24AE /* CompaniesFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA094466299F813C00AA24AE /* CompaniesFilterTableViewCell.swift */; };
 		FA094469299F813C00AA24AE /* CompaniesFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA094467299F813C00AA24AE /* CompaniesFilterTableViewCell.xib */; };
 		FA09446B299F81D700AA24AE /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09446A299F81D700AA24AE /* StaticData.swift */; };
-		FA09446F299F846800AA24AE /* CompaniesCompanyCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09446D299F846800AA24AE /* CompaniesCompanyCellTableViewCell.swift */; };
-		FA094470299F846800AA24AE /* CompaniesCompanyCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA09446E299F846800AA24AE /* CompaniesCompanyCellTableViewCell.xib */; };
+		FA09446F299F846800AA24AE /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09446D299F846800AA24AE /* CompanyTableViewCell.swift */; };
+		FA094470299F846800AA24AE /* CompanyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA09446E299F846800AA24AE /* CompanyTableViewCell.xib */; };
 		FA094475299F882A00AA24AE /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA094474299F882A00AA24AE /* CompanyModel.swift */; };
 		FA31839A299A0E0D00DDDBD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA318399299A0E0D00DDDBD3 /* AppDelegate.swift */; };
 		FA31839C299A0E0D00DDDBD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31839B299A0E0D00DDDBD3 /* SceneDelegate.swift */; };
@@ -44,6 +44,9 @@
 		FAA8A11629A3414100B669B6 /* CompaniesTopCompanyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA8A11429A3414100B669B6 /* CompaniesTopCompanyTableViewCell.xib */; };
 		FAA8A11A29A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8A11829A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.swift */; };
 		FAA8A11B29A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA8A11929A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.xib */; };
+		FAA8A12029A3508700B669B6 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8A11F29A3508700B669B6 /* CompanyDetailViewController.swift */; };
+		FAA8A12429A3521A00B669B6 /* CompanyDetailHeaderUTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8A12229A3521A00B669B6 /* CompanyDetailHeaderUTableViewCell.swift */; };
+		FAA8A12529A3521A00B669B6 /* CompanyDetailHeaderUTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA8A12329A3521A00B669B6 /* CompanyDetailHeaderUTableViewCell.xib */; };
 		FABCA4F7299C883D00989688 /* VacancyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCA4F6299C883D00989688 /* VacancyModel.swift */; };
 		FAC47224299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC47222299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.swift */; };
 		FAC47225299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC47223299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.xib */; };
@@ -53,8 +56,17 @@
 		FAC47237299A995C003E1E3E /* HomeTopCompaniesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC47235299A995C003E1E3E /* HomeTopCompaniesTableViewCell.xib */; };
 		FAC4723B299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC47239299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.swift */; };
 		FAC4723C299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC4723A299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.xib */; };
-		FAC47244299AA783003E1E3E /* HomeVacancyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC47242299AA783003E1E3E /* HomeVacancyTableViewCell.swift */; };
-		FAC47245299AA783003E1E3E /* HomeVacancyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC47243299AA783003E1E3E /* HomeVacancyTableViewCell.xib */; };
+		FAC47244299AA783003E1E3E /* VacancyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC47242299AA783003E1E3E /* VacancyTableViewCell.swift */; };
+		FAC47245299AA783003E1E3E /* VacancyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC47243299AA783003E1E3E /* VacancyTableViewCell.xib */; };
+		FAD3781329A37A7A008E55D8 /* VacancyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3781229A37A7A008E55D8 /* VacancyDetailViewController.swift */; };
+		FAD3781729A38B44008E55D8 /* VacancyDetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3781529A38B44008E55D8 /* VacancyDetailHeaderTableViewCell.swift */; };
+		FAD3781829A38B44008E55D8 /* VacancyDetailHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD3781629A38B44008E55D8 /* VacancyDetailHeaderTableViewCell.xib */; };
+		FAD3781C29A38F86008E55D8 /* VacancyInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3781A29A38F86008E55D8 /* VacancyInfoTableViewCell.swift */; };
+		FAD3781D29A38F86008E55D8 /* VacancyInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD3781B29A38F86008E55D8 /* VacancyInfoTableViewCell.xib */; };
+		FAD3782129A39413008E55D8 /* VacancyAttributeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3781F29A39413008E55D8 /* VacancyAttributeTableViewCell.swift */; };
+		FAD3782229A39413008E55D8 /* VacancyAttributeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD3782029A39413008E55D8 /* VacancyAttributeTableViewCell.xib */; };
+		FAD3782B29A4A01E008E55D8 /* HomeBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3782929A4A01E008E55D8 /* HomeBottomSheetViewController.swift */; };
+		FAD3782C29A4A01E008E55D8 /* HomeBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD3782A29A4A01E008E55D8 /* HomeBottomSheetViewController.xib */; };
 		FAE520D4299CE9B200CDA618 /* CompanyDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE520D3299CE9B200CDA618 /* CompanyDataService.swift */; };
 		FAE520D7299CFA2F00CDA618 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE520D6299CFA2F00CDA618 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
@@ -75,8 +87,8 @@
 		FA094466299F813C00AA24AE /* CompaniesFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesFilterTableViewCell.swift; sourceTree = "<group>"; };
 		FA094467299F813C00AA24AE /* CompaniesFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompaniesFilterTableViewCell.xib; sourceTree = "<group>"; };
 		FA09446A299F81D700AA24AE /* StaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
-		FA09446D299F846800AA24AE /* CompaniesCompanyCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesCompanyCellTableViewCell.swift; sourceTree = "<group>"; };
-		FA09446E299F846800AA24AE /* CompaniesCompanyCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompaniesCompanyCellTableViewCell.xib; sourceTree = "<group>"; };
+		FA09446D299F846800AA24AE /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
+		FA09446E299F846800AA24AE /* CompanyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyTableViewCell.xib; sourceTree = "<group>"; };
 		FA094474299F882A00AA24AE /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 		FA318396299A0E0D00DDDBD3 /* StaffUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaffUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA318399299A0E0D00DDDBD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +113,9 @@
 		FAA8A11429A3414100B669B6 /* CompaniesTopCompanyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompaniesTopCompanyTableViewCell.xib; sourceTree = "<group>"; };
 		FAA8A11829A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesTopCompanyCollectionViewCell.swift; sourceTree = "<group>"; };
 		FAA8A11929A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompaniesTopCompanyCollectionViewCell.xib; sourceTree = "<group>"; };
+		FAA8A11F29A3508700B669B6 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
+		FAA8A12229A3521A00B669B6 /* CompanyDetailHeaderUTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailHeaderUTableViewCell.swift; sourceTree = "<group>"; };
+		FAA8A12329A3521A00B669B6 /* CompanyDetailHeaderUTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyDetailHeaderUTableViewCell.xib; sourceTree = "<group>"; };
 		FABCA4F6299C883D00989688 /* VacancyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyModel.swift; sourceTree = "<group>"; };
 		FAC47222299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopCategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		FAC47223299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTopCategoriesTableViewCell.xib; sourceTree = "<group>"; };
@@ -110,8 +125,17 @@
 		FAC47235299A995C003E1E3E /* HomeTopCompaniesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTopCompaniesTableViewCell.xib; sourceTree = "<group>"; };
 		FAC47239299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopCompanyCollectionViewCell.swift; sourceTree = "<group>"; };
 		FAC4723A299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTopCompanyCollectionViewCell.xib; sourceTree = "<group>"; };
-		FAC47242299AA783003E1E3E /* HomeVacancyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVacancyTableViewCell.swift; sourceTree = "<group>"; };
-		FAC47243299AA783003E1E3E /* HomeVacancyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVacancyTableViewCell.xib; sourceTree = "<group>"; };
+		FAC47242299AA783003E1E3E /* VacancyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyTableViewCell.swift; sourceTree = "<group>"; };
+		FAC47243299AA783003E1E3E /* VacancyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacancyTableViewCell.xib; sourceTree = "<group>"; };
+		FAD3781229A37A7A008E55D8 /* VacancyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyDetailViewController.swift; sourceTree = "<group>"; };
+		FAD3781529A38B44008E55D8 /* VacancyDetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyDetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		FAD3781629A38B44008E55D8 /* VacancyDetailHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacancyDetailHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		FAD3781A29A38F86008E55D8 /* VacancyInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyInfoTableViewCell.swift; sourceTree = "<group>"; };
+		FAD3781B29A38F86008E55D8 /* VacancyInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacancyInfoTableViewCell.xib; sourceTree = "<group>"; };
+		FAD3781F29A39413008E55D8 /* VacancyAttributeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyAttributeTableViewCell.swift; sourceTree = "<group>"; };
+		FAD3782029A39413008E55D8 /* VacancyAttributeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacancyAttributeTableViewCell.xib; sourceTree = "<group>"; };
+		FAD3782929A4A01E008E55D8 /* HomeBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomSheetViewController.swift; sourceTree = "<group>"; };
+		FAD3782A29A4A01E008E55D8 /* HomeBottomSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBottomSheetViewController.xib; sourceTree = "<group>"; };
 		FAE520D3299CE9B200CDA618 /* CompanyDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDataService.swift; sourceTree = "<group>"; };
 		FAE520D6299CFA2F00CDA618 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				FAA8A11229A3411B00B669B6 /* TopCompanyTVC */,
-				FA09446C299F844A00AA24AE /* CompanyCell */,
 				FA094465299F811C00AA24AE /* Filter */,
 				FA094460299F7FFD00AA24AE /* SearchBar */,
 				FA094457299F596C00AA24AE /* Header */,
@@ -214,8 +237,8 @@
 		FA09446C299F844A00AA24AE /* CompanyCell */ = {
 			isa = PBXGroup;
 			children = (
-				FA09446D299F846800AA24AE /* CompaniesCompanyCellTableViewCell.swift */,
-				FA09446E299F846800AA24AE /* CompaniesCompanyCellTableViewCell.xib */,
+				FA09446D299F846800AA24AE /* CompanyTableViewCell.swift */,
+				FA09446E299F846800AA24AE /* CompanyTableViewCell.xib */,
 				FA094474299F882A00AA24AE /* CompanyModel.swift */,
 			);
 			path = CompanyCell;
@@ -251,6 +274,8 @@
 				FA094451299F515800AA24AE /* Profile */,
 				FA3183B0299A0E5E00DDDBD3 /* Home */,
 				FA094454299F56EE00AA24AE /* Comapny */,
+				FAA8A11E29A3506800B669B6 /* CompanyDetail */,
+				FAD3780D29A3796A008E55D8 /* VacancyDetail */,
 				FA3183A5299A0E0E00DDDBD3 /* Assets.xcassets */,
 				FA31839F299A0E0D00DDDBD3 /* Main.storyboard */,
 				FA3183A7299A0E0E00DDDBD3 /* LaunchScreen.storyboard */,
@@ -263,12 +288,8 @@
 		FA3183B0299A0E5E00DDDBD3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				FAC4723D299AA1EE003E1E3E /* Vacancies */,
-				FAC4722F299A990E003E1E3E /* TopCompanies */,
-				FAC4721D299A3D7F003E1E3E /* TopCategories */,
-				FA3183C0299A314E00DDDBD3 /* Filter */,
-				FA3183BB299A2BD200DDDBD3 /* SearchBar */,
-				FA3183B6299A12A600DDDBD3 /* Header */,
+				FAD3782429A49F15008E55D8 /* BottomSheet */,
+				FAD3782329A49ECA008E55D8 /* Cell */,
 				FA73C057299B7BF60099A514 /* HomeNetworkService.swift */,
 				FA3183B4299A0EBA00DDDBD3 /* HomeViewController.swift */,
 				FA73C05A299BAFBE0099A514 /* HomeModel.swift */,
@@ -351,9 +372,29 @@
 		FAA8A11C29A3447500B669B6 /* GeneralCell */ = {
 			isa = PBXGroup;
 			children = (
+				FA09446C299F844A00AA24AE /* CompanyCell */,
+				FAC4723D299AA1EE003E1E3E /* Vacancies */,
 				FA094449299E8C3000AA24AE /* Indicator */,
 			);
 			path = GeneralCell;
+			sourceTree = "<group>";
+		};
+		FAA8A11E29A3506800B669B6 /* CompanyDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FAA8A12129A351BF00B669B6 /* Header */,
+				FAA8A11F29A3508700B669B6 /* CompanyDetailViewController.swift */,
+			);
+			path = CompanyDetail;
+			sourceTree = "<group>";
+		};
+		FAA8A12129A351BF00B669B6 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				FAA8A12229A3521A00B669B6 /* CompanyDetailHeaderUTableViewCell.swift */,
+				FAA8A12329A3521A00B669B6 /* CompanyDetailHeaderUTableViewCell.xib */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		FAC4721D299A3D7F003E1E3E /* TopCategories */ = {
@@ -398,10 +439,69 @@
 			isa = PBXGroup;
 			children = (
 				FABCA4F6299C883D00989688 /* VacancyModel.swift */,
-				FAC47242299AA783003E1E3E /* HomeVacancyTableViewCell.swift */,
-				FAC47243299AA783003E1E3E /* HomeVacancyTableViewCell.xib */,
+				FAC47242299AA783003E1E3E /* VacancyTableViewCell.swift */,
+				FAC47243299AA783003E1E3E /* VacancyTableViewCell.xib */,
 			);
 			path = Vacancies;
+			sourceTree = "<group>";
+		};
+		FAD3780D29A3796A008E55D8 /* VacancyDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FAD3781E29A393E6008E55D8 /* VacancyAttribute */,
+				FAD3781929A38F65008E55D8 /* VacancyInfo */,
+				FAD3781429A38B04008E55D8 /* Header */,
+				FAD3781229A37A7A008E55D8 /* VacancyDetailViewController.swift */,
+			);
+			path = VacancyDetail;
+			sourceTree = "<group>";
+		};
+		FAD3781429A38B04008E55D8 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				FAD3781529A38B44008E55D8 /* VacancyDetailHeaderTableViewCell.swift */,
+				FAD3781629A38B44008E55D8 /* VacancyDetailHeaderTableViewCell.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		FAD3781929A38F65008E55D8 /* VacancyInfo */ = {
+			isa = PBXGroup;
+			children = (
+				FAD3781A29A38F86008E55D8 /* VacancyInfoTableViewCell.swift */,
+				FAD3781B29A38F86008E55D8 /* VacancyInfoTableViewCell.xib */,
+			);
+			path = VacancyInfo;
+			sourceTree = "<group>";
+		};
+		FAD3781E29A393E6008E55D8 /* VacancyAttribute */ = {
+			isa = PBXGroup;
+			children = (
+				FAD3781F29A39413008E55D8 /* VacancyAttributeTableViewCell.swift */,
+				FAD3782029A39413008E55D8 /* VacancyAttributeTableViewCell.xib */,
+			);
+			path = VacancyAttribute;
+			sourceTree = "<group>";
+		};
+		FAD3782329A49ECA008E55D8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA3183BB299A2BD200DDDBD3 /* SearchBar */,
+				FA3183B6299A12A600DDDBD3 /* Header */,
+				FA3183C0299A314E00DDDBD3 /* Filter */,
+				FAC4721D299A3D7F003E1E3E /* TopCategories */,
+				FAC4722F299A990E003E1E3E /* TopCompanies */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FAD3782429A49F15008E55D8 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				FAD3782929A4A01E008E55D8 /* HomeBottomSheetViewController.swift */,
+				FAD3782A29A4A01E008E55D8 /* HomeBottomSheetViewController.xib */,
+			);
+			path = BottomSheet;
 			sourceTree = "<group>";
 		};
 		FAE520D5299CFA1B00CDA618 /* NetworkService */ = {
@@ -473,6 +573,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC47225299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.xib in Resources */,
+				FAD3781829A38B44008E55D8 /* VacancyDetailHeaderTableViewCell.xib in Resources */,
+				FAD3782229A39413008E55D8 /* VacancyAttributeTableViewCell.xib in Resources */,
 				FA3183A9299A0E0E00DDDBD3 /* LaunchScreen.storyboard in Resources */,
 				FAA8A11B29A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.xib in Resources */,
 				FA3183BF299A2CD500DDDBD3 /* HomeSearchBarTableViewCell.xib in Resources */,
@@ -481,15 +583,18 @@
 				FAA8A11629A3414100B669B6 /* CompaniesTopCompanyTableViewCell.xib in Resources */,
 				FA3183BA299A12CD00DDDBD3 /* HomeHeaderTableViewCell.xib in Resources */,
 				FA09445F299F59CD00AA24AE /* CompaniesHeaderTableViewCell.xib in Resources */,
-				FAC47245299AA783003E1E3E /* HomeVacancyTableViewCell.xib in Resources */,
+				FAC47245299AA783003E1E3E /* VacancyTableViewCell.xib in Resources */,
 				FA3183A6299A0E0E00DDDBD3 /* Assets.xcassets in Resources */,
+				FAD3782C29A4A01E008E55D8 /* HomeBottomSheetViewController.xib in Resources */,
 				FA09444D299E8C5000AA24AE /* IndicatorTableViewCell.xib in Resources */,
 				FAC4723C299A99FF003E1E3E /* HomeTopCompanyCollectionViewCell.xib in Resources */,
+				FAA8A12529A3521A00B669B6 /* CompanyDetailHeaderUTableViewCell.xib in Resources */,
 				FA094469299F813C00AA24AE /* CompaniesFilterTableViewCell.xib in Resources */,
 				FA3183A1299A0E0D00DDDBD3 /* Main.storyboard in Resources */,
+				FAD3781D29A38F86008E55D8 /* VacancyInfoTableViewCell.xib in Resources */,
 				FAC4722E299A4192003E1E3E /* HomeTopCategoryCollectionViewCell.xib in Resources */,
 				FA094464299F801900AA24AE /* CompaniesSearchBarTableViewCell.xib in Resources */,
-				FA094470299F846800AA24AE /* CompaniesCompanyCellTableViewCell.xib in Resources */,
+				FA094470299F846800AA24AE /* CompanyTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,27 +652,34 @@
 				FA094450299E8DF700AA24AE /* CategoryDataService.swift in Sources */,
 				FAE520D4299CE9B200CDA618 /* CompanyDataService.swift in Sources */,
 				FA094475299F882A00AA24AE /* CompanyModel.swift in Sources */,
+				FAD3781C29A38F86008E55D8 /* VacancyInfoTableViewCell.swift in Sources */,
 				FAA8A11529A3414100B669B6 /* CompaniesTopCompanyTableViewCell.swift in Sources */,
 				FA73C05E299BB4010099A514 /* Helper.swift in Sources */,
 				FA3183B9299A12CD00DDDBD3 /* HomeHeaderTableViewCell.swift in Sources */,
 				FA094453299F517B00AA24AE /* ProfileViewController.swift in Sources */,
-				FA09446F299F846800AA24AE /* CompaniesCompanyCellTableViewCell.swift in Sources */,
+				FAD3781329A37A7A008E55D8 /* VacancyDetailViewController.swift in Sources */,
+				FA09446F299F846800AA24AE /* CompanyTableViewCell.swift in Sources */,
 				FA094456299F572C00AA24AE /* CompaniesViewController.swift in Sources */,
 				FA09445E299F59CD00AA24AE /* CompaniesHeaderTableViewCell.swift in Sources */,
 				FA094468299F813C00AA24AE /* CompaniesFilterTableViewCell.swift in Sources */,
+				FAA8A12429A3521A00B669B6 /* CompanyDetailHeaderUTableViewCell.swift in Sources */,
 				FA73C061299BB5190099A514 /* UserInfo.swift in Sources */,
 				FA3183C3299A315F00DDDBD3 /* HomeFilterTableViewCell.swift in Sources */,
+				FAA8A12029A3508700B669B6 /* CompanyDetailViewController.swift in Sources */,
 				FA73C058299B7BF60099A514 /* HomeNetworkService.swift in Sources */,
 				FA09444C299E8C5000AA24AE /* IndicatorTableViewCell.swift in Sources */,
+				FAD3781729A38B44008E55D8 /* VacancyDetailHeaderTableViewCell.swift in Sources */,
 				FA09446B299F81D700AA24AE /* StaticData.swift in Sources */,
 				FAC47224299A40D5003E1E3E /* HomeTopCategoriesTableViewCell.swift in Sources */,
+				FAD3782129A39413008E55D8 /* VacancyAttributeTableViewCell.swift in Sources */,
 				FAC4722D299A4192003E1E3E /* HomeTopCategoryCollectionViewCell.swift in Sources */,
-				FAC47244299AA783003E1E3E /* HomeVacancyTableViewCell.swift in Sources */,
+				FAC47244299AA783003E1E3E /* VacancyTableViewCell.swift in Sources */,
 				FA3183BE299A2CD500DDDBD3 /* HomeSearchBarTableViewCell.swift in Sources */,
 				FAC47236299A995C003E1E3E /* HomeTopCompaniesTableViewCell.swift in Sources */,
 				FA094463299F801900AA24AE /* CompaniesSearchBarTableViewCell.swift in Sources */,
 				FA73C05B299BAFBE0099A514 /* HomeModel.swift in Sources */,
 				FAA8A11A29A3430D00B669B6 /* CompaniesTopCompanyCollectionViewCell.swift in Sources */,
+				FAD3782B29A4A01E008E55D8 /* HomeBottomSheetViewController.swift in Sources */,
 				FA31839A299A0E0D00DDDBD3 /* AppDelegate.swift in Sources */,
 				FAE520D7299CFA2F00CDA618 /* NetworkService.swift in Sources */,
 				FABCA4F7299C883D00989688 /* VacancyModel.swift in Sources */,
@@ -720,6 +832,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N63NS5FA8N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StaffUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -748,6 +861,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N63NS5FA8N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StaffUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

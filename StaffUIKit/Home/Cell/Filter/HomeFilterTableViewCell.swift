@@ -8,6 +8,7 @@
 import UIKit
 
 class HomeFilterTableViewCell: UITableViewCell {
+    var vc = UIViewController()
     static var myId = "HomeFilterTableViewCell"
     static var uinib = UINib(nibName: "HomeFilterTableViewCell", bundle: nil)
     var citiesPicker = UIPickerView()
@@ -57,6 +58,12 @@ class HomeFilterTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func tappedFilter(_ sender: Any) {
+        let secondVC = HomeBottomSheetViewController()
+        secondVC.filterDelegate = filterDelegate
+        secondVC.modalPresentationStyle = .overCurrentContext
+        vc.present(secondVC, animated: true)
+    }
 }
 
 extension HomeFilterTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource {

@@ -1,5 +1,5 @@
 //
-//  HomeVacancyTableViewCell.swift
+//  VacancyTableViewCell.swift
 //  StaffUIKit
 //
 //  Created by Ботурбек Имомдодов on 13/02/23.
@@ -7,11 +7,11 @@
 
 import UIKit
 import ShimmerSwift
-class HomeVacancyTableViewCell: UITableViewCell {
+class VacancyTableViewCell: UITableViewCell {
     
     
-    static var myId = "HomeVacancyTableViewCell"
-    static var uinib = UINib(nibName: "HomeVacancyTableViewCell", bundle: nil)
+    static var myId = "VacancyTableViewCell"
+    static var uinib = UINib(nibName: "VacancyTableViewCell", bundle: nil)
     var indexPath = IndexPath()
     @IBOutlet weak var shimmeringView: ShimmeringView!
     @IBOutlet weak var companyLogo: UIImageView!

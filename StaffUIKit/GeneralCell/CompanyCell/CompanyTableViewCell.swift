@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CompaniesCompanyTableViewCell: UITableViewCell {
+class CompanyTableViewCell: UITableViewCell {
     static var myId = "CompaniesCompanyTableViewCell"
     static var uinib = UINib(nibName: "CompaniesCompanyTableViewCell", bundle: nil)
     override func awakeFromNib() {

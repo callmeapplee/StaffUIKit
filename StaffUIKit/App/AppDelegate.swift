@@ -14,9 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let companyDataService = CompanyDataService()
     let categoryDataService = CategoryDataService()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        prepareBeforeAppear()
-        fetchingData()
-        configureTabBar()
+        setup()
         // Override point for customization after application launch.
         return true
     }
@@ -24,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (UserInfo.defaults.integer(forKey: "languageID") == 0){
             UserInfo.defaults.set(2, forKey: "languageID")
         }
-        fetchingData()
         
     }
     // MARK: Fetching data from DataBase with using Core Data
@@ -36,6 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func configureTabBar(){
         UITabBar.appearance().unselectedItemTintColor = UIColor(cgColor: CGColor(red: 77/255, green: 214/255, blue: 140/255, alpha: 1))
         UITabBar.appearance().tintColor = UIColor(cgColor: CGColor(red: 1, green: 108/255, blue: 47/255, alpha: 1))
+    }
+    func setup(){
+        
+        prepareBeforeAppear()
+        fetchingData()
+        configureTabBar()
     }
     // MARK: UISceneSession Lifecycle
 

@@ -18,8 +18,8 @@ class HomeViewController: UIViewController {
     var homeSearchBar = HomeSearchBarTableViewCell()
     var homeFilter = HomeFilterTableViewCell()
     var filtered = false
-    static var activeCompanies:[VacancyDatum] = []
-    static var filterVacancies:[VacancyDatum] = []
+    var activeCompanies:[VacancyDatum] = []
+    var filterVacancies:[VacancyDatum] = []
     static var filterParams = ["","","","","","",""]
     var activeVacanciesPage = 1
     var filterVacanciesPage = 1
@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
         myTableView.register(HomeFilterTableViewCell.uinib, forCellReuseIdentifier: HomeFilterTableViewCell.myId)
         myTableView.register(HomeTopCategoriesTableViewCell.uinib, forCellReuseIdentifier: HomeTopCategoriesTableViewCell.myId)
         myTableView.register(HomeTopCompaniesTableViewCell.uinib, forCellReuseIdentifier: HomeTopCompaniesTableViewCell.myId)
-        myTableView.register(HomeVacancyTableViewCell.uinib, forCellReuseIdentifier: HomeVacancyTableViewCell.myId)
+        myTableView.register(VacancyTableViewCell.uinib, forCellReuseIdentifier: VacancyTableViewCell.myId)
         myTableView.register(IndicatorTableViewCell.uinib, forCellReuseIdentifier: IndicatorTableViewCell.myId)
         
     }
@@ -56,12 +56,14 @@ class HomeViewController: UIViewController {
                 StaticData.categories = home?.response.topCategories ?? []
                 StaticData.cities.insert(City(id: 0, nameTj: "Все города", nameRu: "Все города", nameEn: "Все города", status: 0), at: 0)
                 StaticData.categories.insert(TopCategory(id: 0, name: "Все категории", icon: ""), at: 0)
+                StaticData.scheduleTypes.insert(ScheduleType(id: 0, name: "Не важно", status: 0), at: 0)
+                StaticData.experiences.insert(Experience(id: 0, name: "Не важно"), at: 0)
                 myTableView.reloadData()
             }
         }
         HomeNetworkService.getActiveVacancyData(page: String(describing: 1), perPage: String(describing: 20)) {[self] vacancy in
             if vacancy != nil{
-                HomeViewController.activeCompanies = vacancy?.response.data ?? []
+                activeCompanies = vacancy?.response.data ?? []
                 myTableView.reloadData()
             }
         }
@@ -79,15 +81,64 @@ class HomeViewController: UIViewController {
 }
 extension HomeViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 6{
-            return HomeViewController.activeCompanies.count
-        }
-        else if section == 7{
-            return HomeViewController.filterVacancies.count
-        }
-        else{
+        if section == 0{
             return 1
         }
+        else if section == 1{
+            return 1
+        }
+        else if section == 2{
+            return 1
+        }
+        else if section == 3{
+            if filtered{
+                return 0
+            }
+            else{
+                return 1
+            }
+        }
+        else if section == 4{
+            if filtered{
+                return 0
+            }
+            else{
+                return 1
+            }
+        }
+        else if section == 5{
+            if filtered{
+                return 0
+            }
+            else{
+                return 1
+            }
+        }
+        else if section == 6{
+            if filtered || loadingTime{
+                return 0
+            }
+            else{
+                return activeCompanies.count
+            }
+        }
+        else if section == 7{
+            if filtered && !loadingTime{
+                return filterVacancies.count
+            }
+            else{
+                return 0
+            }
+        }
+        else if section == 8{
+            if loadingTime {
+                return 1
+            }
+            else{
+                return 0
+            }
+        }
+        return 0
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 9
@@ -103,52 +154,22 @@ extension HomeViewController:UITableViewDataSource{
             return 75
         }
         else if indexPath.section == 3{
-            if filtered{
-                return 0
-            }
-            else{
-                return 160
-            }
+            return 160
         }
         else if indexPath.section == 4{
-            if filtered{
-                return 0
-            }
-            else{
-                return 138
-            }
+            return 138
         }
         else if indexPath.section == 5{
-            if filtered{
-                return 0
-            }
-            else{
-                return 38
-            }
+            return 38
         }
         else if indexPath.section == 6{
-            if filtered{
-                return 0
-            }
-            else{
-                return 120
-            }
+            return 120
         }
         else if indexPath.section == 7{
-            if filtered{
-                return 120
-            }
-            else{
-                return 0
-            }
+            return 120
         }
         else if indexPath.section == 8{
-            if loadingTime{
-                return myTableView.frame.size.height - 250
-            }
-            else{
-                return 0
-            }
+            return myTableView.frame.size.height - 250
         }
         return 0
     }
@@ -173,6 +194,7 @@ extension HomeViewController:UITableViewDataSource{
             let cell = myTableView.dequeueReusableCell(withIdentifier: HomeFilterTableViewCell.myId,for: indexPath) as! HomeFilterTableViewCell
             homeFilter = cell
             homeFilter.filterDelegate = self
+            homeFilter.vc = self
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
             return cell
@@ -202,18 +224,18 @@ extension HomeViewController:UITableViewDataSource{
             return cell
         }
         else if section == 6{
-            let cell = myTableView.dequeueReusableCell(withIdentifier: HomeVacancyTableViewCell.myId, for: indexPath) as! HomeVacancyTableViewCell
+            let cell = myTableView.dequeueReusableCell(withIdentifier: VacancyTableViewCell.myId, for: indexPath) as! VacancyTableViewCell
             let row = indexPath.row
-            cell.vacancy = HomeViewController.activeCompanies[row]
+            cell.vacancy = activeCompanies[row]
             
             cell.selectionStyle = .none
             return cell
         }
         else if section == 7{
-            let cell = myTableView.dequeueReusableCell(withIdentifier: HomeVacancyTableViewCell.myId, for: indexPath) as! HomeVacancyTableViewCell
+            let cell = myTableView.dequeueReusableCell(withIdentifier: VacancyTableViewCell.myId, for: indexPath) as! VacancyTableViewCell
             let row = indexPath.row
             
-            cell.vacancy = HomeViewController.filterVacancies[row]
+            cell.vacancy = filterVacancies[row]
             
             cell.selectionStyle = .none
             return cell
@@ -232,15 +254,19 @@ extension HomeViewController:UITableViewDataSource{
     
 }
 extension HomeViewController:UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = indexPath.section
+        if section == 6 || section == 7{
+            let vc = VacancyDetailViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 extension HomeViewController:FilterParams{
     func didChange() {
         filtered = isFiltered()
-        if !loadingTime{
-            loadingTime = true
-            myTableView.reloadSections([3,4,5,6,7,8], with: .automatic)
-        }
+        loadingTime = true
+        myTableView.reloadSections([3,4,5,6,7,8], with: .automatic)
         requestTimer.invalidate()
         requestTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(makeTimerRequest), userInfo: nil, repeats: false)
         
@@ -263,17 +289,14 @@ extension HomeViewController{
     @objc func makeTimerRequest(){
         if filtered{
             filterVacanciesPage = 1
-            
             HomeNetworkService.getFilterVacancyData(page: String(describing:self.filterVacanciesPage), perPage: String(describing: 20)) {[self] vacancy in
                 if vacancy != nil{
-                    HomeViewController.filterVacancies = vacancy?.response.data ?? []
+                    filterVacancies = vacancy?.response.data ?? []
                 }
                 loadingTime = false
                 myTableView.reloadSections([3,4,5,6,7,8], with: .none)
                 
             }
-            
-            
         }
         else{
             loadingTime = false
@@ -285,17 +308,18 @@ extension HomeViewController{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
-        print(loadingTime)
         if offsetY > contentHeight - scrollView.frame.height + 30 {
             if filtered && !filterVacancyFetchingMore{
+                
                 filterVacanciesPage += 1
                 filterVacancyFetchingMore = true
                 HomeNetworkService.getFilterVacancyData(page: String(describing:filterVacanciesPage), perPage: String(describing: 20)) {[self] vacancy in
                     if vacancy != nil{
-                        filterVacancyFetchingMore = false
                         let temp = vacancy?.response.data ?? []
                         for i in temp{
-                            HomeViewController.filterVacancies.append(i)
+                            print("aslkdfjalskjdlkaslkdlfkj")
+                            filterVacancies.append(i)
+                            filterVacancyFetchingMore = false
                         }
                     }
                     myTableView.reloadData()
@@ -306,13 +330,13 @@ extension HomeViewController{
                 activeVacancyFetchingMore = true
                 HomeNetworkService.getActiveVacancyData(page: String(describing: activeVacanciesPage), perPage: String(describing: 20)) { [self] vacancy in
                     if vacancy != nil{
-                        activeVacancyFetchingMore = false
                         let temp = vacancy?.response.data ?? []
                         for i in temp{
-                            HomeViewController.activeCompanies.append(i)
+                            activeCompanies.append(i)
+                            activeVacancyFetchingMore = false
                         }
-                        myTableView.reloadData()
                     }
+                    myTableView.reloadData()
                 }
             }
             
