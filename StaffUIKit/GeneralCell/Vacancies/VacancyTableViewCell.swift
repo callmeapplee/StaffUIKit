@@ -8,8 +8,6 @@
 import UIKit
 import ShimmerSwift
 class VacancyTableViewCell: UITableViewCell {
-    
-    
     static var myId = "VacancyTableViewCell"
     static var uinib = UINib(nibName: "VacancyTableViewCell", bundle: nil)
     var indexPath = IndexPath()

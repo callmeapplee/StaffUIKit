@@ -303,7 +303,7 @@
     <resources>
         <image name="CompanyTabBarIcon" width="21" height="22.333333969116211"/>
         <image name="VacancyTabBarIcon" width="23" height="23"/>
-        <image name="Vector-53" width="30.666666030883789" height="30.666666030883789"/>
+        <image name="Vector-53" width="128" height="128"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="profile" width="114" height="114"/>
         <systemColor name="systemBackgroundColor">

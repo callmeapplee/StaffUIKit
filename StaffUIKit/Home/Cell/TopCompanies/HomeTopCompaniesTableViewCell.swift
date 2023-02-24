@@ -10,7 +10,7 @@ import UIKit
 class HomeTopCompaniesTableViewCell: UITableViewCell {
     static var myId = "HomeTopCompaniesTableViewCell"
     static var uinib = UINib(nibName: "HomeTopCompaniesTableViewCell", bundle: nil)
-    
+    var vc = UIViewController()
     @IBOutlet weak var myCollectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +30,11 @@ class HomeTopCompaniesTableViewCell: UITableViewCell {
     
 }
 extension HomeTopCompaniesTableViewCell:UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondVC = storyboard.instantiateViewController(withIdentifier: "CompanyDetailViewController") as! CompanyDetailViewController
+        vc.navigationController?.pushViewController(secondVC, animated: true)
+    }
 }
 extension HomeTopCompaniesTableViewCell:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

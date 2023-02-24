@@ -46,8 +46,6 @@ class HomeViewController: UIViewController {
         
     }
     func setup(){
-        backgroundTap.addTarget(self, action: #selector(closeInputView))
-        self.view.addGestureRecognizer(backgroundTap)
         HomeNetworkService.getHomeData { [self] home in
             if home != nil{
                 StaticData.topCompanies = home?.response.topCompanies ?? []
@@ -209,6 +207,7 @@ extension HomeViewController:UITableViewDataSource{
         else if section == 4{
             let cell = myTableView.dequeueReusableCell(withIdentifier: HomeTopCompaniesTableViewCell.myId,for: indexPath) as! HomeTopCompaniesTableViewCell
             cell.myCollectionView.reloadData()
+            cell.vc = self
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
             return cell
@@ -227,14 +226,12 @@ extension HomeViewController:UITableViewDataSource{
             let cell = myTableView.dequeueReusableCell(withIdentifier: VacancyTableViewCell.myId, for: indexPath) as! VacancyTableViewCell
             let row = indexPath.row
             cell.vacancy = activeCompanies[row]
-            
             cell.selectionStyle = .none
             return cell
         }
         else if section == 7{
             let cell = myTableView.dequeueReusableCell(withIdentifier: VacancyTableViewCell.myId, for: indexPath) as! VacancyTableViewCell
             let row = indexPath.row
-            
             cell.vacancy = filterVacancies[row]
             
             cell.selectionStyle = .none
@@ -250,14 +247,15 @@ extension HomeViewController:UITableViewDataSource{
             return UITableViewCell()
         }
     }
-    
-    
+
 }
 extension HomeViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        closeInputView()
         let section = indexPath.section
         if section == 6 || section == 7{
-            let vc = VacancyDetailViewController()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "VacancyDetailViewController") as! VacancyDetailViewController
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
